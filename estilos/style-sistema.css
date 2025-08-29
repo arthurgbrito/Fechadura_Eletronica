@@ -1,0 +1,196 @@
+
+:root {
+    --yellow: #f6f326;
+    --Main-green: #388E3C;
+    --Dark-green: #2E7D32;
+    --Light-green: #E8F5E9;
+    --Middle-green: #66BB6A;
+    --Darker-green: #1B5E20;
+    --red: #ED1C24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    overflow-x: hidden; 
+    width: 100%;   
+    background-color: var(--Light-green);
+}
+
+header {
+    height: 100px;
+    width: 100vw;
+    background: linear-gradient(var(--Darker-green), var(--Dark-green));
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    width: 60%;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+header img {
+    height: 80px;
+    margin-left: 15px;
+}
+
+header h1 {
+    color: var(--yellow);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.464);
+    font-size: 30px;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    height: calc(100vh - 105px);
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    
+}
+
+section#historico{
+    color: var(--Main-green);
+    margin: 30px;
+    padding: 5px;
+    border: 2px solid var(--Main-green);
+    border-radius: 15px;
+    box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.35 );
+    flex: 1;
+    text-align: center;
+}
+
+section#historico h1 {
+    padding: 15px;
+}
+
+section#historico:hover , #interacao_Porta:hover, #interacao_Porta:hover .titulo_lab, .caixa-laboratorio:hover {
+    animation: foco-secoes .5s ease-in-out; 
+}
+
+
+#mostra_Historico {
+  width: 95%;
+  height: 85%;
+  border: 1px solid black;
+
+}
+
+#interacao_Porta {
+    flex: 1;
+    margin: 30px 0;
+    height: 90%;
+    border: 2px solid var(--Main-green);
+    border-radius: 15px;
+    margin-right: 15px;
+    box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.35 );
+}
+
+.rolagem_lab{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-y: scroll;
+    max-height: 88%;
+    padding-bottom: 10px;
+}
+
+.titulo_lab {
+    text-align: center;
+    grid-column: span 2;
+    padding: 15px;
+    color: var(--Main-green);
+    background-color: var(--Light-green);
+    border-radius: 15px 15px 0 0;
+}
+
+section#historico h1, .titulo_lab {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2  05);
+}
+
+.caixa-laboratorio {
+    color: var(--Main-green);
+    margin: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    border: 2px solid var(--Main-green);
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.caixa-laboratorio > * {
+    margin: 5px;
+}
+
+.estado_porta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+}
+
+.estado_porta img {
+    height: 40px;
+    display: inline;
+}
+
+.estado_porta h2 {
+    display: inline;
+    margin-top: 5px;
+}
+
+.modo_aula {
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#ativar1 {
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--Dark-green);
+    color: var(--Light-green);
+    transition: .2s;
+}
+
+#ativar1:active {
+    background-color: var(--Main-green);
+    color: var(--Light-green);
+    transform: translateX(2px) translateY(2px);
+}
+
+@keyframes foco-secoes {
+    0% {
+        transform: translateX(0px);
+        background-color: var(--Light-green);
+    }
+    50% {
+        transform: translateX(2px);
+        background-color: #ccddcd;
+        color: var(--Main-green);
+    }
+    100% {
+        transform: translateX(0px);
+        background-color: var(--Light-green);
+    }
+}
+

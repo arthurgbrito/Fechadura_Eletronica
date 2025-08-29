@@ -1,0 +1,182 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #298839;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+header {
+    height: 35%;
+    padding: 6px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text h1, .text h2 {
+    font-family: 'Figtree';
+}
+
+.text h1 {
+    font-size: 27px;
+}
+
+.text h2 {
+    font-size: 17px;
+    font-weight: normal;
+}
+
+#box-image {
+    width: calc(105px + 5vw);
+    height: calc(105px + 5vw);
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-curso {
+    width: calc(105px + 3vw);
+    height: calc(105px + 3vw);
+    background: white url('../estilos/imagens/logo-tro.jpg') center no-repeat;
+    background-size: contain;
+    border-radius: 20px;
+
+}
+
+#form {
+    font-family: 'Figtree';
+    background-color: white;
+    color: #787a7a;
+    height: 65%;
+    width: 100vw;
+    border-radius: 0 80px 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.info h1 { 
+    font-family: 'Figtree';
+    color: #298839;
+    font-size: 9vw;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.info p {
+    font-size: 3.2vw;
+}
+
+form {
+    width: 80vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.input {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    margin-bottom: 7px;
+}
+
+.input label {
+    font-family: 'IBM Plex Sans';
+    text-align: left;
+    width: 50%;
+    display: block;
+    font-size: 2.8vw;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+
+.input input {
+    background-color: #2988397b;
+    color: black;
+    font-size: 3vw;
+    width: 100%;
+    padding: 9px 13px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+#ipassword {
+    width: 100%;
+}
+
+.box-password {
+    width: 100%;
+}
+
+#olho {
+    font-size: 5vw;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-15%);
+    cursor: pointer;
+    color: #1e772d;
+}
+
+#submit {
+    width: 90%;
+    padding: 8px;
+    background-color: #298839;
+    color: white;
+    font-weight: 600;
+    font-size: 3vw;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 10px;
+}
+
+#submit:hover {
+    transform: translateY(3px);
+    background-color: #32a745;
+}
+
+.help {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}   
+
+.help * {
+    color: #787a7a;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 3vw;
+}
+
+.help *:hover {
+    color: #595a5a;
+}

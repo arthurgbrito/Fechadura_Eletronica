@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #2e7d32; 
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    height: 30vh;
+}
+
+.text {
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.text h2 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #c8e6c9;
+}
+
+.box-image {
+    background-color: #fff;
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.box-image img {
+    width: 110px;
+    height: 110px;
+}
+
+section {
+    background-color: #fff;
+    color: #333;
+    border-radius: 0 80px 0 0;
+    width: 100vw;
+    height: 70vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h3 {
+    color: #2e7d32;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.input {
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    color: #787a7a;
+    display: block;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-weight: 600;
+    text-align: left;
+    width: 50px;
+}
+
+input, select {
+    background-color: #2988397b;
+    color: black;
+    padding: 13px 20px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    width: 100%;
+    padding: 10px;    
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 17px;
+    max-width: 400px;
+}
+
+.box-password {
+    position: relative;
+    width: 100%;
+}
+
+#olho {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-45%);
+    position: absolute;
+    font-size: 5.5vw;
+    cursor: pointer;
+    color: #1e772d;;
+}
+
+#enviar {
+    width: 100%;
+    padding: 10px;
+    background-color: #298839;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 20px;
+}
+
+#enviar:hover {
+    transform: translateY(3px);
+    background-color: #32a745;
+}
+
+.link-login {
+    margin: 15px 2px;
+    text-align: center;
+    width: 100%;
+}
+
+.link-login a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+}
