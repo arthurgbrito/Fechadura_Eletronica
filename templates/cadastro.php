@@ -2,14 +2,6 @@
 
 if (isset($_POST['enviar'])){
 
-  /*print_r('Usuario: ' . $_POST['usuario']);
-  print_r('<br>');
-  print_r('Email: ' . $_POST['email']);
-  print_r('<br>');
-  print_r('Senha: ' . $_POST['senha']);
-  print_r('<br>');
-  print_r('Cargo: ' . $_POST['cargo']);*/
-
   include_once('../conexao.php');
 
   $nome = $_POST['nome'];
@@ -19,7 +11,14 @@ if (isset($_POST['enviar'])){
 
   $resultado = mysqli_query($conn, "INSERT INTO Usuarios(Username, Password, Email, Cargo) VALUES ('$nome', '$senha', '$email', '$cargo')");
   
-  header('Location: login.php');
+  if ($resultado){
+    $usuario_id = mysqli_insert_id($conn);  
+
+    $sql = "INSERT INTO Solicitacoes(usuario_id, status_cadastro) VALUES ('$usuario_id', 'pendente')";
+    mysqli_query($conn, $sql);
+  }
+
+  header('Location: sistema.php');
 
 }
 
