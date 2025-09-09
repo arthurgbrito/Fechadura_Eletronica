@@ -1,23 +1,70 @@
 @charset "UTF-8";
 
 
-@media screen and (max-width: 500px){
-    .rolagem_lab {
-        grid-template-columns: 1fr;
+@media screen and (max-width: 768px){
+    
+    header h1 {
+        font-size: 3.1vw;
     }
 
-    .caixa-laboratorio {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(1fr, 150px));
-    
+    header img {
+        height: 12vw;
+    }
+
+    .estado_porta h2 {
+        font-size: 3vw;
+    }
+
+    .estado_porta img {
+        height: 6vw;
     }
 
     .caixa-laboratorio > h1 {
-        grid-column: span 2;
+        font-size: 3.7vw;
     }
+
+    .modo_aula label {
+        font-size: 4vw;
+    }
+
+    .caixa_led {
+        width: 20px;
+        height: 20px;
+    }
+
+    .led {
+        width: 70%;
+        height: 90%;
+    }
+
+    .baixo-led {
+        width: 80%;
+        height: 10%;
+
+    }
+
+    .switch {
+        width: 60px;
+        height: 30px;
+    }
+
+    .slider {
+        position: absolute;
+        left: 5px;
+        height: 23px;
+        width: 23px;
+        background-color: white;
+        border-radius: 50%;
+        transition: all .5s ease-in-out;
+    }
+
+    .toggle:checked ~ .switch .slider {
+        transform: translateX(27px);
+    }
+
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1140px) {
     
     main {
         flex-flow: column nowrap;
@@ -45,5 +92,9 @@
         margin: 0;
         margin: 15px 0 ;
         height: 500px;
+    }
+
+    .caixa-laboratorio h1 {
+        font-size: 3.7vw;
     }
 }

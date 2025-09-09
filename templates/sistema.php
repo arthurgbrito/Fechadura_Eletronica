@@ -32,10 +32,6 @@
             <iframe src="historico.html" id="mostra_Historico" frameborder="0"></iframe>
         </section>
         <section id="interacao_Porta">
-            <!--
-                <button onclick="window.location.href='ligaled.php?acao=on'">Ativar Modo Aula</button>
-                onclick = ligaLed()
-                -->
 
         <h1 class="titulo_lab">Laboratórios</h1>
 
@@ -63,31 +59,38 @@
                             <span class="baixo-led"></span> 
                         </div>
                     </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
+
             <div class="caixa-laboratorio">
                 <h1>Laboratório 2</h1>
                 <div class="estado_porta">
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle2">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_2">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle2" class="toggle" onclick="liga_Led('2')">
-                            <label for="toggle2" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_2">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle2">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_2">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle2" class="toggle" onclick="liga_Led('2')">
+                        <label for="toggle2" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_2">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
             
@@ -97,23 +100,26 @@
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle3">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_3">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle3" class="toggle" onclick="liga_Led('3')">
-                            <label for="toggle3" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_3">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle3">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_3">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle3" class="toggle" onclick="liga_Led('3')">
+                        <label for="toggle3" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_3">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
             
@@ -123,23 +129,26 @@
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle6">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_6">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle6" class="toggle" onclick="liga_Led('6')">
-                            <label for="toggle6" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_6">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle6">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_6">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle6" class="toggle" onclick="liga_Led('6')">
+                        <label for="toggle6" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_6">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
             
@@ -149,23 +158,26 @@
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle9">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_9">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle9" class="toggle" onclick="liga_Led('9')">
-                            <label for="toggle9" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_9">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle9">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_9">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle9" class="toggle" onclick="liga_Led('9')">
+                        <label for="toggle9" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_9">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
             
@@ -175,23 +187,26 @@
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle10">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_10">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle10" class="toggle" onclick="liga_Led('10')">
-                            <label for="toggle10" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_10">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle10">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_10">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle10" class="toggle" onclick="liga_Led('10')">
+                        <label for="toggle10" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_10">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
             
@@ -201,23 +216,26 @@
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle11">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_11">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle11" class="toggle" onclick="liga_Led('11')">
-                            <label for="toggle11" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_11">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle11">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_11">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle11" class="toggle" onclick="liga_Led('11')">
+                        <label for="toggle11" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_11">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
             
@@ -227,23 +245,26 @@
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle12">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_12">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle12" class="toggle" onclick="liga_Led('12')">
-                            <label for="toggle12" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_12">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle12">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_12">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle12" class="toggle" onclick="liga_Led('12')">
+                        <label for="toggle12" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_12">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
             
@@ -253,23 +274,26 @@
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle13">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_13">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle13" class="toggle" onclick="liga_Led('13')">
-                            <label for="toggle13" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_13">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle13">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_13">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle13" class="toggle" onclick="liga_Led('13')">
+                        <label for="toggle13" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_13">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
             
@@ -279,23 +303,26 @@
                     <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
-                    <div class="modo_aula">
-                        <label for="toggle14">Modo Aula</label>
-                        
-                        <div class="toggle-modo-aula">
-                            <div class="caixa_led" id="led_R_14">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
-                            <input type="checkbox" name="on/off" id="toggle14" class="toggle" onclick="liga_Led('14')">
-                            <label for="toggle14" class="switch">
-                                <span class="slider"></span>
-                            </label>
-                            <div class="caixa_led" id="led_G_14">
-                                <div class="led"></div>
-                                <span class="baixo-led"></span> 
-                            </div>
+                <div class="modo_aula">
+                    <label for="toggle14">Modo Aula</label>
+                    
+                    <div class="toggle-modo-aula">
+                        <div class="caixa_led" id="led_R_14">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
                         </div>
+                        <input type="checkbox" name="on/off" id="toggle14" class="toggle" onclick="liga_Led('14')">
+                        <label for="toggle14" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="caixa_led" id="led_G_14">
+                            <div class="led"></div>
+                            <span class="baixo-led"></span> 
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" value="Abrir Porta" class="abre_porta">
+                    </div>
                 </div>
             </div>
         </div>
