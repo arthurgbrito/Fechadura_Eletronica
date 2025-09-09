@@ -122,18 +122,25 @@ section#historico h1, .titulo_lab {
 .caixa-laboratorio {
     color: var(--Main-green);
     margin: 10px;
-    padding: 5px;
-    padding-right: 10px;
     border: 2px solid var(--Main-green);
     border-radius: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+}
+
+.caixa-laboratorio h1 {
+    background-color: var(--Main-green);
+    color: var(--Light-green);
+    border-radius: 12px 12px 0 0;
+    font-size: 30px;
+    padding: 10px 0;
 }
 
 .caixa-laboratorio > * {
-    margin: 5px;
+    margin-bottom: 10px;
 }
 
 .estado_porta{
@@ -157,15 +164,64 @@ section#historico h1, .titulo_lab {
     width: 100%;
     font-size: 25px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
-#ativar1 {
-    width: 70px;
+.toggle-modo-aula {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.led {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #afafaf;
+}
+
+.toggle {
+    display: none;
+}
+
+.switch {
+    background-color: #9a9a9a;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+
+.slider {
+    position: absolute;
+    left: 5px;
     height: 30px;
-    border-radius: 10px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+}
+
+.toggle:checked ~ .switch {
+    background-color: var(--Main-green);
+}
+
+.toggle:checked ~ .switch .slider {
+    transform: translateX(40px);
+}
+
+/*#ativar {
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
     border: none;
     background-color: var(--Dark-green);
     color: var(--Light-green);
@@ -176,7 +232,7 @@ section#historico h1, .titulo_lab {
     background-color: var(--Main-green);
     color: var(--Light-green);
     transform: translateX(2px) translateY(2px);
-}
+}*/
 
 @keyframes foco-secoes {
     0% {
