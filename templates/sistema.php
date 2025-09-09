@@ -19,7 +19,7 @@
     <script src="../script.js"></script>
     <link rel="shortcut icon" href="../estilos/imagens/logo-tro.ico" type="image/x-icon">
 </head>
-<body onload="ligaLed()">
+<body>
 
     <header>
         <img src="../estilos/imagens/logo-tro.png" alt="Logo Curso">
@@ -48,14 +48,20 @@
                 </div>
                 <div class="modo_aula">
                     <label for="toggle1">Modo Aula</label>
-                    
-                    <div class="toggle-modo-aula">
-                        <div class="led" id="led_R_1"></div>
+                        <div class="toggle-modo-aula">
+                            
+                        <div class="caixa_led" id="led_R_1"> 
+                            <span class="led"></span> 
+                            <span class="baixo-led"></span> 
+                        </div>
                         <input type="checkbox" name="on/off" id="toggle1" class="toggle" onclick="liga_Led('1')">
                         <label for="toggle1" class="switch">
                             <span class="slider"></span>
                         </label>
-                        <div class="led" id="led_G_1"></div>
+                        <div class="caixa_led" id="led_G_1">
+                            <span class="led"></span>
+                            <span class="baixo-led"></span> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,12 +75,18 @@
                         <label for="toggle2">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_2"></div>
+                            <div class="caixa_led" id="led_R_2">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle2" class="toggle" onclick="liga_Led('2')">
                             <label for="toggle2" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_2"></div>
+                            <div class="caixa_led" id="led_G_2">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
@@ -89,12 +101,18 @@
                         <label for="toggle3">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_3"></div>
+                            <div class="caixa_led" id="led_R_3">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle3" class="toggle" onclick="liga_Led('3')">
                             <label for="toggle3" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_3"></div>
+                            <div class="caixa_led" id="led_G_3">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
@@ -109,12 +127,18 @@
                         <label for="toggle6">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_6"></div>
+                            <div class="caixa_led" id="led_R_6">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle6" class="toggle" onclick="liga_Led('6')">
                             <label for="toggle6" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_6"></div>
+                            <div class="caixa_led" id="led_G_6">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
@@ -129,12 +153,18 @@
                         <label for="toggle9">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_9"></div>
+                            <div class="caixa_led" id="led_R_9">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle9" class="toggle" onclick="liga_Led('9')">
                             <label for="toggle9" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_9"></div>
+                            <div class="caixa_led" id="led_G_9">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
@@ -149,12 +179,18 @@
                         <label for="toggle10">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_10"></div>
+                            <div class="caixa_led" id="led_R_10">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle10" class="toggle" onclick="liga_Led('10')">
                             <label for="toggle10" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_10"></div>
+                            <div class="caixa_led" id="led_G_10">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
@@ -169,12 +205,18 @@
                         <label for="toggle11">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_11"></div>
+                            <div class="caixa_led" id="led_R_11">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle11" class="toggle" onclick="liga_Led('11')">
                             <label for="toggle11" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_11"></div>
+                            <div class="caixa_led" id="led_G_11">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
@@ -189,12 +231,18 @@
                         <label for="toggle12">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_12"></div>
+                            <div class="caixa_led" id="led_R_12">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle12" class="toggle" onclick="liga_Led('12')">
                             <label for="toggle12" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_12"></div>
+                            <div class="caixa_led" id="led_G_12">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
@@ -209,12 +257,18 @@
                         <label for="toggle13">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_13"></div>
+                            <div class="caixa_led" id="led_R_13">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle13" class="toggle" onclick="liga_Led('13')">
                             <label for="toggle13" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_13"></div>
+                            <div class="caixa_led" id="led_G_13">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
@@ -229,12 +283,18 @@
                         <label for="toggle14">Modo Aula</label>
                         
                         <div class="toggle-modo-aula">
-                            <div class="led" id="led_R_14"></div>
+                            <div class="caixa_led" id="led_R_14">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                             <input type="checkbox" name="on/off" id="toggle14" class="toggle" onclick="liga_Led('14')">
                             <label for="toggle14" class="switch">
                                 <span class="slider"></span>
                             </label>
-                            <div class="led" id="led_G_14"></div>
+                            <div class="caixa_led" id="led_G_14">
+                                <div class="led"></div>
+                                <span class="baixo-led"></span> 
+                            </div>
                         </div>
                 </div>
             </div>
