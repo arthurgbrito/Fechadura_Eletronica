@@ -2,7 +2,7 @@
 
 if (isset($_POST['enviar'])){
 
-  include_once('../conexao.php');
+  include_once('../database/conexao.php');
 
   $nome = $_POST['nome'];
   $senha = $_POST['senha'];

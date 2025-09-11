@@ -5,7 +5,7 @@
 
     if (isset($_POST['Entrar']) && !empty($_POST['email']) && !empty($_POST['password'])){
         
-        include_once('../conexao.php');
+        include_once('../database/conexao.php');
 
         $email = $_POST['email'];
         $senha = $_POST['password'];

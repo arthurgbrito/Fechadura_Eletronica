@@ -3,13 +3,14 @@
 
 @media screen and (max-width: 768px){
     
-    header h1 {
-        font-size: 3.1vw;
+    .header_title {
+        font-size: 3.2vw;
     }
 
     header img {
         height: 12vw;
     }
+
 
     .estado_porta h2 {
         font-size: 3vw;
@@ -60,6 +61,12 @@
 
     .toggle:checked ~ .switch .slider {
         transform: translateX(27px);
+    }
+
+    .abre_porta {
+        width: 60%;
+        height: 30px;
+        font-size: 15px;
     }
 
 }

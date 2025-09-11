@@ -16,14 +16,14 @@
     <title>Sistema</title>
     <link rel="stylesheet" href="../estilos/style-sistema.css">
     <link rel="stylesheet" href="../estilos/medias-sistema.css">
-    <script src="../script.js"></script>
+    <script src="../scripts/script.js"></script>
     <link rel="shortcut icon" href="../estilos/imagens/logo-tro.ico" type="image/x-icon">
 </head>
 <body>
 
     <header>
         <img src="../estilos/imagens/logo-tro.png" alt="Logo Curso">
-        <h1>Controle de Acesso - Curso de Eletrônica</h1>
+        <h1 class="header_title" >Controle de Acesso - Curso de Eletrônica</h1>
     </header>
 
     <main>
@@ -59,7 +59,7 @@
                             <span class="baixo-led"></span> 
                         </div>
                     </div>
-                    <div>
+                    <div class="box-botao" >
                         <input type="button" value="Abrir Porta" class="abre_porta">
                     </div>
                 </div>

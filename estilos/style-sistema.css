@@ -172,6 +172,10 @@ section#historico h1, .titulo_lab {
     gap: 10px;
 }
 
+.modo_aula > div {
+    width: 100%;
+}
+
 .modo_aula label {
     font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -240,7 +244,7 @@ section#historico h1, .titulo_lab {
     transition: all .5s ease-in-out;
 }
 
-.toggle:checked ~ .switch {
+.toggle:checked ~ .switch { 
     background-color: var(--Main-green);
 }
 
@@ -253,7 +257,6 @@ section#historico h1, .titulo_lab {
     height: 40px;
     font-size: 20px;
     font-weight: 600;
-    padding: 10px;
     margin-top: 25px;
     margin-bottom: 10px;
     border-radius: 40px;
