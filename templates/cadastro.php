@@ -18,7 +18,7 @@ if (isset($_POST['enviar'])){
     mysqli_query($conn, $sql);
   }
 
-  header('Location: sistema.php');
+  header('Location: espera.html');
 
 }
 
@@ -29,10 +29,10 @@ if (isset($_POST['enviar'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro - Controle de Acesso</title>
-  <link rel="stylesheet" href="../estilos/style-cadastro.css">
-  <link rel="stylesheet" href="../estilos/medias-cadastro.css">
+  <link rel="stylesheet" href="../style/style-cadastro.css">
+  <link rel="stylesheet" href="../style/medias-cadastro.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="shortcut icon" href="../estilos/imagens/logo-tro.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../style/imagens/logo-tro.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -42,7 +42,7 @@ if (isset($_POST['enviar'])){
       <h2>Curso de Eletrônica</h2>
     </div>
     <div class="box-image">
-      <img src="../estilos/imagens/logo-tro.png" alt="Logo TRO Eletrônica">
+      <img src="../style/imagens/logo-tro.png" alt="Logo TRO Eletrônica">
     </div>
   </header>
 

@@ -37,10 +37,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../estilos/style-login.css">
-    <link rel="stylesheet" href="../estilos/medias-login.css">
+    <link rel="stylesheet" href="../style/style-login.css">
+    <link rel="stylesheet" href="../style/medias-login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="../estilos/imagens/logo-tro.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../style/imagens/logo-tro.ico" type="image/x-icon">
 </head>
 <body>
 

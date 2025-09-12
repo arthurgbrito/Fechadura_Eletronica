@@ -14,15 +14,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema</title>
-    <link rel="stylesheet" href="../estilos/style-sistema.css">
-    <link rel="stylesheet" href="../estilos/medias-sistema.css">
+    <link rel="stylesheet" href="../style/style-sistema.css">
+    <link rel="stylesheet" href="../style/medias-sistema.css">
     <script src="../scripts/script.js"></script>
-    <link rel="shortcut icon" href="../estilos/imagens/logo-tro.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../style/imagens/logo-tro.ico" type="image/x-icon">
 </head>
 <body>
 
     <header>
-        <img src="../estilos/imagens/logo-tro.png" alt="Logo Curso">
+        <img src="../style/imagens/logo-tro.png" alt="Logo Curso">
         <h1 class="header_title" >Controle de Acesso - Curso de Eletrônica</h1>
     </header>
 
@@ -39,7 +39,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 1</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -68,7 +68,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 2</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -97,7 +97,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 3</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -126,7 +126,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 6</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -155,7 +155,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 9</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -184,7 +184,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 10</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -213,7 +213,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 11</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -242,7 +242,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 12</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -271,7 +271,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 13</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
@@ -300,7 +300,7 @@
             <div class="caixa-laboratorio">
                 <h1>Laboratório 14</h1>
                 <div class="estado_porta">
-                    <img src="../estilos/imagens/porta-fechada.png" alt="porta-aberta">
+                    <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
                     <h2>FECHADO</h2>
                 </div>
                 <div class="modo_aula">
