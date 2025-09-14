@@ -20,7 +20,7 @@
 
 
         // Apaga as informações do usuário que tentou se cadastrar
-        $sql = "DELETE u FROM usuarios u JOIN solicitacoes s ON u.id = s.usuario_id WHERE id = '$id_solicitacao'";
+        $sql = "DELETE u FROM usuarios u JOIN solicitacoes s ON u.id = s.usuario_id WHERE s.id = '$id_solicitacao'";
         mysqli_query($conn, $sql);
 
         echo json_encode(["status" => "erro"]);
