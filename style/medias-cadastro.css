@@ -4,6 +4,7 @@
 
     header {
         width: 100vw;
+        height: 25vh;
         display: flex;
         flex-direction: row;
         align-items: center;

@@ -108,6 +108,11 @@ if (isset($_POST['enviar'])){
 
   </section>
 
+  <div id="aproximeCracha">
+    <h1>Aproxime o seu crachá na Fechadura</h1>
+    <img src="../style/imagens/aproximacao-sem-fundo.jpg" alt="aproximação" class="imagem">
+  </div>
+
 
 </body>
 </html>
