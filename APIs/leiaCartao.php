@@ -18,7 +18,7 @@
 
             $row = mysqli_fetch_assoc($result);
             $estado_atual = (int)$row['modo_aula'];
-            $estado_novo = $estado_atual ? 0 : 1;
+            $estado_novo = !$estado_atual;
 
             $sql = "UPDATE laboratorios SET modo_aula = '$estado_novo' WHERE id = '$lab'";
             mysqli_query($conn, $sql);
@@ -26,7 +26,7 @@
             $response = [ 
                 "autorizado" => true,
                 "username" => $user['Username'],
-                "modoAula" => $estado_atual
+                "modoAula" => $estado_novo
             ];
                 
         }
