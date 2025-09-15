@@ -18,7 +18,7 @@ if (isset($_POST['enviar'])){
     mysqli_query($conn, $sql);
   }
 
-  header('Location: espera.html');
+  //header('Location: login.php');
 
 }
 
