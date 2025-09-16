@@ -241,7 +241,6 @@ section#historico h1, .titulo_lab {
     width: 30px;
     background-color: white;
     border-radius: 50%;
-    transition: all .5s ease-in-out;
 }
 
 .toggle:checked ~ .switch { 
@@ -249,6 +248,7 @@ section#historico h1, .titulo_lab {
 }
 
 .toggle:checked ~ .switch .slider {
+    transition: all .5s ease-in-out;
     transform: translateX(40px);
 }
 
