@@ -10,7 +10,7 @@
 
     if (mysqli_num_rows($result) > 0){
         $row = mysqli_fetch_assoc($result);
-        $response = $row['status_cadastro'];
+        $response = $row;
     } else {
         $response = ["mensagem" => "nenhuma_solicitacao"];
     }
