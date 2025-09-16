@@ -2,10 +2,10 @@ let labs = [1,2,3,6,9,10,11,12,13,14];
 
 addEventListener ("DOMContentLoaded", () => {
 
-    labs.forEach(num => {atualizaLED(num)})
+    labs.forEach(num => {carregaLED(num)})
 })
 
-async function atualizaLED (lab) {
+async function carregaLED (lab) {
     try {
 
         indice = labs.indexOf(lab) + 1
@@ -15,16 +15,6 @@ async function atualizaLED (lab) {
 
         const data = await response.json();
         if (data.ok){
-
-            let led_red = document.getElementById('led_R_' + lab)
-            let led_green = document.getElementById('led_G_' + lab)
-
-            let red_circle = led_red.querySelector(".led");
-            let red_base   = led_red.querySelector(".baixo-led");
-
-            let green_circle = led_green.querySelector(".led");
-            let green_base   = led_green.querySelector(".baixo-led");
-
         
             if (data.modo_aula == 1){
                 atualiza_Led(lab, "on")
@@ -40,12 +30,33 @@ async function atualizaLED (lab) {
     }
 }
 
-setInterval(() => {labs.forEach(num => atualizaLED(num))}, 2000);
+
+async function atualizaModoAula(lab){
+
+    let toggleAtual = document.getElementById('toggle' + lab)
+    let estadoNovo = toggleAtual.checked ? 1 : 0;
+
+    try {
+        const resp = await fetch(`../APIs/atualizaModoAula.php?lab=${lab}&estado=${estadoNovo}`, {method: "GET", cache: "no-store"});
+
+        const data = await resp.json();
+
+        if(data.ok){
+            if (estadoNovo) atualiza_Led(lab, "on");
+            else atualiza_Led(lab, "off");
+        }
+    } catch (err) {
+        console.error("Erro ao atualizar modo aula:", err);
+    }
+}
+
+
+setInterval(() => {labs.forEach(num => carregaLED(num))}, 2000);
 
 function atualiza_Led (lab, estado){
 
-    let toggle_atual = document.getElementById('toggle' + lab)
-    let switch_atual = toggle_atual.nextElementSibling;
+    let toggleAtual = document.getElementById('toggle' + lab)
+    let switch_atual = toggleAtual.nextElementSibling;
     let slider = switch_atual.querySelector(".slider");
 
     let led_red = document.getElementById('led_R_' + lab)
@@ -68,9 +79,9 @@ function atualiza_Led (lab, estado){
         red_base.style.backgroundImage = "linear-gradient(#afafaf, #afafaf)";
         red_circle.style.boxShadow = "none";
 
-        toggle_atual.checked = true
+        toggleAtual.checked = true
 
-        if (toggle_atual.checked){
+        if (toggleAtual.checked){
             switch_atual.style.backgroundColor = "#388E3C";
             slider.style.transform = "translateX(40px)";
         }
@@ -84,9 +95,9 @@ function atualiza_Led (lab, estado){
         red_base.style.backgroundImage = "linear-gradient(to right, rgba(255, 0, 0, 0.66) 20%, rgba(255, 30, 30, 0.57) 60%, rgba(255, 35, 35, 0.2)) ";
         red_circle.style.boxShadow = "0px 0px 8px 8px rgba(255, 0, 0, 0.79)";
 
-        toggle_atual.checked = false
+        toggleAtual.checked = false
 
-        if (!toggle_atual.checked){
+        if (!toggleAtual.checked){
             switch_atual.style.backgroundColor = "#9a9a9a";
             slider.style.transform = "translateX(0px)";
         }
