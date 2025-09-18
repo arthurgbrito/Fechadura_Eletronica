@@ -46,7 +46,7 @@ if (isset($_POST['enviar'])){
     </div>
   </header>
 
-  <section>
+  <section id="conteudo">
     
     <h3>Cadastro de Usuário</h3>
       
@@ -93,6 +93,10 @@ if (isset($_POST['enviar'])){
 
       <script>
 
+        const section = document.getElementById("conteudo");
+        const aproxime = document.getElementById("aproximeCracha");
+        const submit = document.getElementById("enviar");
+
         const olho = document.getElementById('olho');
         const senha = document.getElementById('senha');
 
@@ -103,6 +107,15 @@ if (isset($_POST['enviar'])){
             olho.classList.toggle('bi-eye-fill', senhaVisivel);
             olho.classList.toggle('bi-eye-slash-fill', !senhaVisivel);
         });
+
+        submit.addEventListener("submit", async (e) => {
+
+          e.preventDefault();
+
+          section.style.display = "none";
+          aproxime.style.display = "block";
+        })
+
 
     </script>
 
