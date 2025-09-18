@@ -18,7 +18,7 @@
     <title>Sistema</title>
     <link rel="stylesheet" href="../style/style-sistema.css">
     <link rel="stylesheet" href="../style/medias-sistema.css">
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/sistemaScript.js"></script>
     <link rel="shortcut icon" href="../style/imagens/logo-tro.ico" type="image/x-icon">
 </head>
 <body>

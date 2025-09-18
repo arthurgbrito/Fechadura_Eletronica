@@ -1,6 +1,6 @@
 <?php 
 
-if (isset($_POST['enviar'])){
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
   include_once('../database/conexao.php');
 
@@ -9,17 +9,26 @@ if (isset($_POST['enviar'])){
   $email = $_POST['email'];
   $cargo = $_POST['cargo'];
 
-  $resultado = mysqli_query($conn, "INSERT INTO Usuarios(Username, Password, Email, Cargo) VALUES ('$nome', '$senha', '$email', '$cargo')");
+  $resultado = mysqli_query($conn, "INSERT INTO usuarios(Username, Password, Email, Cargo) VALUES ('$nome', '$senha', '$email', '$cargo')");
   
   if ($resultado){
     $usuario_id = mysqli_insert_id($conn);  
 
-    $sql = "INSERT INTO Solicitacoes(usuario_id, status_cadastro) VALUES ('$usuario_id', 'pendente')";
+    $sql = "INSERT INTO solicitacoes(usuario_id, status_cadastro) VALUES ('$usuario_id', 'pendente')";
     mysqli_query($conn, $sql);
+
+    $sql = "SELECT id from solicitacoes WHERE usuario_id = '$usuario_id' ORDER BY id DESC LIMIT 1";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $solicitacao_id = $row['id'];
+
+    header('Content-Type: application/json');
+    echo json_encode(['ok' => true, "solicitacao_id" => $solicitacao_id]);
+  } else {
+      header('Content-Type: application/json', true, 500);
+      echo json_encode(['ok' => false, 'error' => mysqli_error($conn)]);
   }
-
-  //header('Location: login.php');
-
+  exit;
 }
 
 ?>
@@ -33,6 +42,7 @@ if (isset($_POST['enviar'])){
   <link rel="stylesheet" href="../style/medias-cadastro.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="shortcut icon" href="../style/imagens/logo-tro.ico" type="image/x-icon">
+  <script src="../scripts/cadastroScript.js"></script>
 </head>
 <body>
 
@@ -50,8 +60,7 @@ if (isset($_POST['enviar'])){
     
     <h3>Cadastro de Usuário</h3>
       
-      
-      <form action="cadastro.php" method="POST">
+      <form id="formCadastro">
 
         <div class="input">
           <label for="nome">Nome:</label>
@@ -90,42 +99,12 @@ if (isset($_POST['enviar'])){
       <div class="link-login">
         <p>Já tenho cadastro? <a href="login.php">Login</a></p>
       </div>
-
-      <script>
-
-        const section = document.getElementById("conteudo");
-        const aproxime = document.getElementById("aproximeCracha");
-        const submit = document.getElementById("enviar");
-
-        const olho = document.getElementById('olho');
-        const senha = document.getElementById('senha');
-
-        olho.addEventListener('click', () => {
-            const senhaVisivel = senha.type ==='text';
-            senha.type = senhaVisivel ? 'password' : 'text';
-            
-            olho.classList.toggle('bi-eye-fill', senhaVisivel);
-            olho.classList.toggle('bi-eye-slash-fill', !senhaVisivel);
-        });
-
-        submit.addEventListener("submit", async (e) => {
-
-          e.preventDefault();
-
-          section.style.display = "none";
-          aproxime.style.display = "block";
-        })
-
-
-    </script>
-
   </section>
 
   <div id="aproximeCracha">
     <h1>Aproxime o seu crachá na Fechadura</h1>
     <img src="../style/imagens/aproximacao-sem-fundo.jpg" alt="aproximação" class="imagem">
   </div>
-
-
+  
 </body>
 </html>
