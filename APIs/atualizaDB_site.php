@@ -3,10 +3,36 @@
     include_once("../database/conexao.php");
 
     $lab = $_GET['lab'];
-    $response = ["ok" => false];
+    $estado_atual = (int)$_GET['estado'];
+
+    if((!isset($_SESSION['email'])) || (!isset($_SESSION['senha']))){
+        echo json_encode(["ok" => false, "mensagem" => "Sessão expirada"]);
+        
+    } else {
+
+        $sql = "UPDATE laboratorios SET modo_aula = '$estado_atual' WHERE id = '$lab'";
+
+        if (mysqli_query($conn, $sql)) {
+            echo json_encode([
+                "ok" => true,
+                "lab" => $lab,
+                "modo_aula" => $estado_atual
+            ]);
+        } else {
+            echo json_encode([
+                "ok" => false,
+                "mensagem" => "Erro ao atualizar"
+            ]);
+        }
+    }
+    
+    header("Content-Type: application/json");
+    
+
+    
 
     // Verifica se existe algum usuário logado
-    if((!isset($_SESSION['email'])) || (!isset($_SESSION['senha']))){
+    /*if((!isset($_SESSION['email'])) || (!isset($_SESSION['senha']))){
         echo json_encode(["ok" => false, "mensagem" => "Sessão expirada"]);
         
     } else { // Se existir
@@ -25,8 +51,8 @@
             $user_id = $user['id']; // Pega esse ID
 
             // Procura na tabela de permissões se ele tem permissão para entrar no lab
-            /*$sql = "SELECT * FROM permissoes WHERE usuario_id = '$user_id' AND laboratorio_id = '$lab' LIMIT 1";
-            $result = mysqli_query($conn, $sql);*/
+            $sql = "SELECT * FROM permissoes WHERE usuario_id = '$user_id' AND laboratorio_id = '$lab' LIMIT 1";
+            $result = mysqli_query($conn, $sql);
 
             $sql = "SELECT modo_aula FROM laboratorios WHERE id = '$lab' LIMIT 1";
             $res = mysqli_query($conn, $sql);
@@ -34,9 +60,9 @@
             $row = mysqli_fetch_assoc($res);
             $estado_atual = (int)$row['modo_aula'];
 
-            /*$estado_novo = !$estado_atual;
+            $estado_novo = !$estado_atual;
             $sql = "UPDATE laboratorios SET modo_aula = '$estado_novo' WHERE id = '$lab'";
-            mysqli_query($conn, $sql);*/
+            mysqli_query($conn, $sql);
 
             $response = [
                 "ok" => true,
@@ -46,15 +72,12 @@
             ];
 
             // Se existir essa permissão
-            /*if (mysqli_num_rows($result) > 0){
+            if (mysqli_num_rows($result) > 0){
 
 
                 
-            }*/
+            }
         }
-    }
-
-    header("Content-Type: application/json");
-    echo json_encode($response);
+    }*/
 
 ?>
