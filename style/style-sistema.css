@@ -69,6 +69,12 @@ header {
     font-size: 1.2vw;
 }
 
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: var(--yellow);
+    transition: .2s;
+}
+
 header h1 {
     width: 60%;
     white-space: normal;

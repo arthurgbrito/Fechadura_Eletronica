@@ -1,4 +1,5 @@
 let labs = [1,2,3,6,9,10,11,12,13,14];
+let flag = 0;
 
 addEventListener ("DOMContentLoaded", () => {
 
@@ -119,4 +120,15 @@ function atualiza_Led (lab, estado){
 }
 
 
+const menu = document.querySelector('.menu');
+const navbar = document.querySelector('.navbar ul');
 
+menu.addEventListener('click', () => {
+    if (flag == 0){
+        navbar.style.transform = "translateX(0)";
+        flag = 1;
+    } else {
+        navbar.style.transform = "translateX(-100%)";
+        flag = 0;
+    }
+})

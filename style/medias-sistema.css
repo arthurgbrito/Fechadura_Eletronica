@@ -98,7 +98,7 @@
         width: 100%;
     }
 
-    .manu {
+    .menu {
         display: block;
     }
 
@@ -107,14 +107,23 @@
         top: 0;
         left: 0;
         width: 130px;
-        height: 100%;
-        background-image: linear-gradient(to bottom, var(--Dark-green), var(--Light-green));
+        height: auto + 50px;
+        background-image: linear-gradient(to bottom, var(--Darker-green), var(--Middle-green));
         flex-direction: column;
         align-items: center;
         justify-content: start;
         gap: 30px;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
-        padding-top: 40px;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.432);
+        padding-top: 100px;
+        transform: translateX(-100%);
+    }
+
+    .navbar ul li {
+        opacity: 1;
+    }
+
+    .navbar ul li a {
+        font-size: 15px;
     }
 
     section#interacao_Porta, section#historico {
