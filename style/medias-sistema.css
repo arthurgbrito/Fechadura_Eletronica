@@ -20,6 +20,10 @@
         height: 6vw;
     }
 
+    .caixa-laboratorio {
+        width: 0vw;
+    }
+
     .caixa-laboratorio > h1 {
         font-size: 3.7vw;
     }
@@ -71,37 +75,44 @@
 
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (min-width: 768px) and (max-width:950px){
     
     main {
         flex-flow: column nowrap;
-        height: 1100px;
-        align-items: center;
+        height: 1150px;
     }
 
-    #interacao_Porta {
-        align-items: center;
-        width: 100%;
+    #interacao_Porta, section#historico {
+        width: 90%;
+        margin: 10px 0;
     }
-
-    section#historico, #interacao_Porta {
-        width: 90vw;
-
+    
+    .caixa-laboratorio {
+        width: 31vw;
     }
+}
 
-    section#historico {
-        margin: 0;
-        margin-top: 15px;
-        height: 400px;
-    }
+@media screen and (min-width: 950px) and (max-width: 1140px) {
 
-    #interacao_Porta {
-        margin: 0;
-        margin: 15px 0 ;
-        height: 500px;
-    }
+    .rolagem_lab {
+        grid-auto-flow: column;          /* organiza em colunas */
+        grid-template-rows: repeat(2, 1fr); /* fixa em 2 linhas */
+        gap: 10px;
+        overflow-x: auto;   /* scroll só na horizontal */
+        overflow-y: hidden; /* esconde scroll vertical */
+        padding: 15px;
+        scroll-snap-type: x mandatory; /* opcional: carrossel suave */
+        margin: 0 10px;}
 
     .caixa-laboratorio h1 {
-        font-size: 3.7vw;
+        font-size: 2vw;
+    }
+
+    .modo_aula label {
+        font-size: 2vw;
+    }
+
+    .abre_porta {
+        font-size: 15px;
     }
 }

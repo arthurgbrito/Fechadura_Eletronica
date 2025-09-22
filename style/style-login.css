@@ -55,7 +55,7 @@ header {
 #logo-curso {
     width: calc(105px + 3vw);
     height: calc(105px + 3vw);
-    background: white url('../estilos/imagens/logo-tro.jpg') center no-repeat;
+    background: white url('../style/imagens/logo-tro.png') center no-repeat;
     background-size: contain;
     border-radius: 20px;
 
