@@ -11,6 +11,19 @@
         height: 12vw;
     }
 
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        height: auto;
+        width: 100%;
+    }
+
+    section#interacao_Porta, section#historico {
+        width: 90%;
+        margin: 10px 0;
+        flex: none;
+        max-width: 90%;
+    }
 
     .estado_porta h2 {
         font-size: 3vw;
@@ -21,7 +34,8 @@
     }
 
     .caixa-laboratorio {
-        width: 0vw;
+        width: 200px;
+        gap: 5px;
     }
 
     .caixa-laboratorio > h1 {
@@ -29,7 +43,7 @@
     }
 
     .modo_aula label {
-        font-size: 4vw;
+        font-size: 3vw;
     }
 
     .caixa_led {
@@ -75,24 +89,44 @@
 
 }
 
-@media screen and (min-width: 768px) and (max-width:950px){
+@media screen and (min-width: 769px) and (max-width:950px){
     
     main {
+        display: flex;
         flex-flow: column nowrap;
-        height: 1150px;
+        height: auto;
+        width: 100%;
     }
 
-    #interacao_Porta, section#historico {
+    section#interacao_Porta, section#historico {
         width: 90%;
         margin: 10px 0;
+        flex: none;
+        max-width: 90%;
     }
     
     .caixa-laboratorio {
         width: 31vw;
     }
+
+    .caixa_led {
+        width: 25px;
+        height: 25px;
+    }
+
+    .led {
+        width: 70%;
+        height: 90%;
+    }
+
+    .baixo-led {
+        width: 80%;
+        height: 10%;
+
+    }
 }
 
-@media screen and (min-width: 950px) and (max-width: 1140px) {
+@media screen and (min-width: 951px) and (max-width: 1140px) {
 
     .rolagem_lab {
         grid-auto-flow: column;          /* organiza em colunas */

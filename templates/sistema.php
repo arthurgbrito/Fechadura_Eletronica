@@ -323,7 +323,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="box-botao">
                         <input type="button" value="Abrir Porta" class="abre_porta">
                     </div>
                 </div>
