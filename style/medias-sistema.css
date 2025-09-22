@@ -98,6 +98,25 @@
         width: 100%;
     }
 
+    .manu {
+        display: block;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 130px;
+        height: 100%;
+        background-image: linear-gradient(to bottom, var(--Dark-green), var(--Light-green));
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 30px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+        padding-top: 40px;
+    }
+
     section#interacao_Porta, section#historico {
         width: 90%;
         margin: 10px 0;
@@ -128,14 +147,18 @@
 
 @media screen and (min-width: 951px) and (max-width: 1140px) {
 
+    .navbar ul li a {
+        font-size: 1.5vw;
+    }
+
     .rolagem_lab {
-        grid-auto-flow: column;          /* organiza em colunas */
-        grid-template-rows: repeat(2, 1fr); /* fixa em 2 linhas */
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2, 1fr);
         gap: 10px;
-        overflow-x: auto;   /* scroll só na horizontal */
-        overflow-y: hidden; /* esconde scroll vertical */
+        overflow-x: auto;   
+        overflow-y: hidden; 
         padding: 15px;
-        scroll-snap-type: x mandatory; /* opcional: carrossel suave */
+        scroll-snap-type: x mandatory; 
         margin: 0 10px;}
 
     .caixa-laboratorio h1 {

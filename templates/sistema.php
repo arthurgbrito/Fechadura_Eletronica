@@ -28,8 +28,20 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
 <body>
 
     <header>
-        <img src="../style/imagens/logo-tro.png" alt="Logo Curso">
+        <div class="menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Sistema</a></li>
+                <li><a href="#">Programar Fechadura</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
         <h1 class="header_title">Controle de Acesso - Curso de Eletrônica</h1>
+        <img src="../style/imagens/logo-tro.png" alt="Logo Curso">
     </header>
 
     <main>
