@@ -22,7 +22,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
     <link rel="stylesheet" href="../style/medias-sistema.css">
 
     <link rel="shortcut icon" href="../style/imagens/logo-tro.ico" type="image/x-icon">
-    
+
 </head>
 
 <body>
@@ -50,7 +50,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
             <h1 class="titulo_lab">Laboratórios</h1>
 
             <div class="rolagem_lab">
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-right-down">
                     <h1>Laboratório 1</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -79,7 +79,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </div>
                 </div>
 
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-right-up">
                     <h1>Laboratório 2</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -108,7 +108,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </div>
                 </div>
 
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-down">
                     <h1>Laboratório 3</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -136,8 +136,8 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <input type="button" value="Abrir Porta" class="abre_porta">
                     </div>
                 </div>
-
-                <div class="caixa-laboratorio">
+ 
+                <div class="caixa-laboratorio expand-up">
                     <h1>Laboratório 6</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -166,7 +166,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </div>
                 </div>
 
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-down">
                     <h1>Laboratório 9</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -195,7 +195,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </div>
                 </div>
 
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-up">
                     <h1>Laboratório 10</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -224,7 +224,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </div>
                 </div>
 
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-down">
                     <h1>Laboratório 11</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -253,7 +253,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </div>
                 </div>
 
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-up">
                     <h1>Laboratório 12</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -282,7 +282,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </div>
                 </div>
 
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-left-down">
                     <h1>Laboratório 13</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
@@ -311,7 +311,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </div>
                 </div>
 
-                <div class="caixa-laboratorio">
+                <div class="caixa-laboratorio expand-left-up">
                     <h1>Laboratório 14</h1>
                     <div class="estado_porta">
                         <img src="../style/imagens/porta-fechada.png" alt="porta-aberta">
