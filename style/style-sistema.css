@@ -209,7 +209,7 @@ section#historico h1, .titulo_lab {
     z-index: 60;
     box-shadow: 0 22px 40px rgba(0,0,0,0.35);
     pointer-events: auto;
-
+    
 }
 
 .caixa-laboratorio:focus-within {
@@ -219,9 +219,7 @@ section#historico h1, .titulo_lab {
 
 .caixa-laboratorio:hover .toggle-modo-aula,
 .caixa-laboratorio:focus-within .toggle-modo-aula {
-    opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
 }
 
 .caixa-laboratorio:hover .switch,
@@ -229,13 +227,12 @@ section#historico h1, .titulo_lab {
     display: block;
     order: 1;
     animation: mostraToggle .3s ease-in-out forwards;
-    transition: .3s ease-in-out;
 }
 
 .caixa-laboratorio:hover .modo_aula,
 .caixa-laboratorio:focus-within .modo_aula {
     flex-direction: column;
-
+    align-items: center;
 }
 
 .caixa-laboratorio:hover .modo_aula label,
@@ -247,13 +244,6 @@ section#historico h1, .titulo_lab {
 .caixa-laboratorio:focus-within .caixa_led {
     order: 2;
     animation: mostraToggle .3s ease-in-out forwards;
-
-}
-
-.caixa-laboratorio:hover .toggle:checked ~ .switch .slider,
-.caixa-laboratorio:focus-within .toggle:checked ~ .switch .slider{
-    transition: all .5s ease-in-out;
-    transform: translateX(2px);
 }
 
 .caixa-laboratorio h1 {
@@ -263,7 +253,6 @@ section#historico h1, .titulo_lab {
     border-radius: 12px 12px 0 0;
     font-size: 30px;
     padding: 10px 0;
-    z-index: 1;
 }
 
 .estado_porta{
@@ -295,7 +284,7 @@ section#historico h1, .titulo_lab {
 }
 
 .modo_aula > div {
-    width: 50%;
+    width: 40%;
 }
 
 .modo_aula label {
@@ -303,25 +292,22 @@ section#historico h1, .titulo_lab {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     order: 1;
-    transform: translateX(65%);
 }
 
 .toggle-modo-aula {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    opacity: 0;
-    transform: translateY(-6px);
-    pointer-events: none;
-    transition: opacity .18s ease, transform .18s ease;
     order: 2;
 }
 
 .caixa_led {
     position: relative;
-    height: 20px;
-    width: 20px;    
+    height: 80%;
+    width: 50%;    
     display: flex;
+    align-items: center;
     justify-content: center;
     align-items: start;
 }
@@ -351,14 +337,14 @@ section#historico h1, .titulo_lab {
 }
 
 .switch {
+    display: none;
     background-color: #9a9a9a;
     position: relative;
     width: 60px;
     height: 30px;
     border-radius: 50px;
-    display: none;
     align-items: center;
-    transition: all .5s ease-in-out;
+    overflow: hidden;
 }
 
 .slider {
@@ -369,11 +355,13 @@ section#historico h1, .titulo_lab {
     width: 24px;
     background-color: white;
     border-radius: 50%;
+    transition: all .5s ease-in-out;
 }
 
 .toggle:checked ~ .switch { 
     background-color: var(--Main-green);
 }
+
 
 .box-botao{
     width: 100%;
