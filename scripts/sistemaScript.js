@@ -97,7 +97,7 @@ function atualiza_Led (lab, estado){
 
         if (toggleAtual.checked){
             switch_atual.style.backgroundColor = "#388E3C";
-            slider.style.transform = "translateX(26px)";
+            slider.style.transform = "translateX(30px)";
         }
 
     } else if (estado == "off") {

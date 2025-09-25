@@ -41,6 +41,26 @@ header {
     width: 100%;
 }
 
+.mainTitle h1 {
+    margin-left: 50px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.mainTitle img {
+    height: 80px;
+    margin-right: 15px;
+}
+
+.mainTitle h1 {
+    text-align: center;
+    color: var(--yellow);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.464);
+    font-size: 30px;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
+}
+
 .menu {
     cursor: pointer;
     display: none;
@@ -75,7 +95,7 @@ header {
 .navbar ul li a {
     text-decoration: none;
     color: var(--Light-green);
-    font-size: 1.2vw;
+    font-size: 18px;
     padding: 5px;
     border-radius: 10px;
 }
@@ -84,26 +104,6 @@ header {
     background-color: var(--yellow);
     color: var(--Dark-green);
     transition: .5s;
-}
-
-.mainTitle h1 {
-    margin-right: 50px;
-    white-space: normal;
-    word-wrap: break-word;
-}
-
-.mainTitle img {
-    height: 80px;
-    margin-right: 15px;
-}
-
-.mainTitle h1 {
-    text-align: center;
-    color: var(--yellow);
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.464);
-    font-size: 30px;
-    display: inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
 }
 
 
@@ -163,8 +163,7 @@ section#interacao_Porta {
     grid-auto-flow: column;
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
-    overflow-x: auto;
-    overflow-y: visible; 
+    overflow-x: auto; 
     padding: 10px;
     scroll-snap-type: x mandatory;
     margin: 0 10px;
@@ -185,7 +184,7 @@ section#historico h1, .titulo_lab {
 }
 
 .caixa-laboratorio {
-    scroll-snap-align: start;
+    scroll-snap-align: start top;
     flex: auto;
     color: var(--Main-green);
     background-color: var(--Light-green);
@@ -237,13 +236,19 @@ section#historico h1, .titulo_lab {
 .caixa-laboratorio:focus-within .switch{
     display: block;
     order: 1;
-    animation: mostraToggle .3s ease-in-out forwards;
 }
 
 .caixa-laboratorio:hover .modo_aula,
 .caixa-laboratorio:focus-within .modo_aula {
     flex-direction: column;
     align-items: center;
+    height: 100%;
+}
+
+.caixa-laboratorio:hover .modo_aula > div,
+.caixa-laboratorio:focus-within .modo_aula > div {
+    width: 100%;
+    text-align: center;
 }
 
 .caixa-laboratorio:hover .modo_aula label,
@@ -255,6 +260,8 @@ section#historico h1, .titulo_lab {
 .caixa-laboratorio:focus-within .caixa_led {
     order: 2;
     animation: mostraToggle .3s ease-in-out forwards;
+    width: 20px;
+    height: 20px;
 }
 
 .caixa-laboratorio h1 {
@@ -285,6 +292,7 @@ section#historico h1, .titulo_lab {
 
 .modo_aula {
     width: 100%;
+    height: 150px;
     font-size: 25px;
     display: flex;
     flex-direction: row;
@@ -306,6 +314,7 @@ section#historico h1, .titulo_lab {
 }
 
 .toggle-modo-aula {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -360,7 +369,7 @@ section#historico h1, .titulo_lab {
 
 .slider {
     position: absolute;
-    left: 5px;
+    left: 3px;
     top: 3px;
     height: 24px;
     width: 24px;
@@ -410,16 +419,5 @@ section#historico h1, .titulo_lab {
     100% {
         transform: translateX(0px);
         background-color: var(--Light-green);
-    }
-}
-
-@keyframes mostraToggle {
-    0% {
-        opacity: 0;
-        transform: translateY(-6px);
-    } 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
     }
 }

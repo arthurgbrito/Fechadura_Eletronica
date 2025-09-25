@@ -91,6 +91,13 @@
 
 @media screen and (min-width: 769px) and (max-width:950px){
     
+    header {
+        position: relative;
+        height: 100px;
+        align-items: start;
+        justify-content: center;
+    }
+
     main {
         display: flex;
         flex-flow: column nowrap;
@@ -98,8 +105,15 @@
         width: 100%;
     }
 
+    .mainTitle {
+        position: absolute;
+        top: 5%;
+    }
+
     .menu {
         display: block;
+        margin-left: 40px;
+        margin-top: 20px;
     }
 
     .navbar ul {

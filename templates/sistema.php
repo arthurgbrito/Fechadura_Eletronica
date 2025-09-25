@@ -29,13 +29,13 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
 
     <header>
         <div class="mainTitle">
-            <div class="menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <h1 class="header_title">Controle de Acesso</h1>
             <img src="../style/imagens/logo-tro.png" alt="Logo Curso">
+            <h1 class="header_title">Controle de Acesso</h1>
+        </div>
+        <div class="menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
         <nav class="navbar">
             <ul>
