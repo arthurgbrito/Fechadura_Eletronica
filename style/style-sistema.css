@@ -62,7 +62,6 @@ header {
 }
 
 .menu {
-    cursor: pointer;
     display: none;
 }
 
@@ -214,18 +213,14 @@ section#historico h1, .titulo_lab {
 .caixa-laboratorio.expand-left-down:hover   { transform-origin: right top; }   
 .caixa-laboratorio.expand-left-up:hover     { transform-origin: right bottom; }
 
-.caixa-laboratorio:hover {
+.caixa-laboratorio:hover, 
+.caixa-laboratorio:focus-within {
     transform: scale(1.2);
     z-index: 60;
     box-shadow: 0 22px 40px rgba(0,0,0,0.35);
     pointer-events: auto;
     
-}
-
-.caixa-laboratorio:focus-within {
-    transform: scale(1.06);
-    z-index: 50;
-}
+} 
 
 .caixa-laboratorio:hover .toggle-modo-aula,
 .caixa-laboratorio:focus-within .toggle-modo-aula {
@@ -243,6 +238,7 @@ section#historico h1, .titulo_lab {
     flex-direction: column;
     align-items: center;
     height: 100%;
+    margin-top: 0;
 }
 
 .caixa-laboratorio:hover .modo_aula > div,
@@ -262,6 +258,14 @@ section#historico h1, .titulo_lab {
     animation: mostraToggle .3s ease-in-out forwards;
     width: 20px;
     height: 20px;
+}
+
+.caixa-laboratorio:hover .abre_porta,
+.caixa-laboratorio:focus-within .abre_porta {
+    font-size: 17px;
+    width: 55%;
+    height: 120%;
+    padding-top: 2px;
 }
 
 .caixa-laboratorio h1 {
@@ -292,7 +296,7 @@ section#historico h1, .titulo_lab {
 
 .modo_aula {
     width: 100%;
-    height: 150px;
+    height: 50px;
     font-size: 25px;
     display: flex;
     flex-direction: row;

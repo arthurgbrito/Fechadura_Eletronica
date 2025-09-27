@@ -125,10 +125,16 @@ const navbar = document.querySelector('.navbar ul');
 
 menu.addEventListener('click', () => {
     if (flag == 0){
-        navbar.style.transform = "translateX(0)";
+        navbar.style.opacity = "1";
+        navbar.style.pointerEvents = "auto";
+        menu.style.transform = "rotate(90deg)";
+        menu.style.transition = "transform 0.3s ease";
         flag = 1;
     } else {
-        navbar.style.transform = "translateX(-100%)";
+        navbar.style.opacity = "0";
+        navbar.style.pointerEvents = "none";
+        menu.style.transform = "rotate(0deg)";
+        menu.style.transition = "transform 0.3s ease";
         flag = 0;
     }
 })

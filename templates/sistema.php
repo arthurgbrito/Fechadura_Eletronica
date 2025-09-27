@@ -39,9 +39,9 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Sistema</a></li>
+                <li><a href="#" class="top">Sistema</a></li>
                 <li><a href="#">Programar Fechadura</a></li>
-                <li><a href="#">Sair</a></li>
+                <li><a href="#" class="bottom">Sair</a></li>
             </ul>
         </nav>
     </header>
