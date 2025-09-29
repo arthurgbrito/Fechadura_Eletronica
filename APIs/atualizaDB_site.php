@@ -51,7 +51,7 @@
             $user_id = $user['id']; // Pega esse ID
 
             // Procura na tabela de permissões se ele tem permissão para entrar no lab
-            $sql = "SELECT * FROM permissoes WHERE usuario_id = '$user_id' AND laboratorio_id = '$lab' LIMIT 1";
+            $sql = "SELECT * FROM permissoes WHERE usuario_id = '$user_id' AND lab_id = '$lab' LIMIT 1";
             $result = mysqli_query($conn, $sql);
 
             $sql = "SELECT modo_aula FROM laboratorios WHERE id = '$lab' LIMIT 1";
