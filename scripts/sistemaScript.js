@@ -3,21 +3,16 @@ let flag = 0;
 
 addEventListener ("DOMContentLoaded", () => {
 
-    labs.forEach(num => {carregaLED(num)})
+    labs.forEach(num => {procuraModoAula(num)})
 })
 
-setInterval(() => {labs.forEach(num => carregaLED(num))}, 2000);
+setInterval(() => {labs.forEach(num => procuraModoAula(num))}, 10000);
 
-async function carregaLED (lab) {
+async function procuraModoAula (lab) {
 
-    let toggleAtual = document.getElementById('toggle' + lab)
+    indice = labs.indexOf(lab) + 1
 
     try {
-
-        indice = labs.indexOf(lab) + 1
-
-        if(toggleAtual.checked) estadoNovo = 1;
-        else estadoNovo = 0;
 
         const response = await fetch(`../APIs/getModoAula.php?lab=${indice}`, {method:  "GET", cache: "no-store"});
         if (!response.ok) throw new Error ("HTTP" + response.status);
@@ -27,7 +22,6 @@ async function carregaLED (lab) {
         
             if (data.modo_aula == 1){
                 atualiza_Led(lab, "on")
-
             } else {
                 atualiza_Led(lab, "off")
             }
@@ -46,16 +40,18 @@ async function atualizaModoAula(lab){
 
     if(toggleAtual.checked) estadoNovo = 1;
     else estadoNovo = 0;
+    indice = labs.indexOf(lab) + 1;
 
     try {
-
-        indice = labs.indexOf(lab) + 1
         
         const resp = await fetch(`../APIs/atualizaDB_site.php?lab=${indice}&estado=${estadoNovo}`, {method: "GET", cache: "no-store"});
+        console.log(resp);
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
 
         const data = await resp.json();
 
         if(data.ok){
+            console.log("Modo aula atualizado com sucesso");
             if (data.modo_aula) atualiza_Led(lab, "on");
             else atualiza_Led(lab, "off");
         }
@@ -63,8 +59,6 @@ async function atualizaModoAula(lab){
         console.error("Erro ao atualizar modo aula:", err);
     }
 }
-
-
 
 
 function atualiza_Led (lab, estado){

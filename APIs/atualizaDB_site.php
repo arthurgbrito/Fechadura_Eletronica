@@ -2,21 +2,25 @@
     session_start();
     include_once("../database/conexao.php");
 
-    $lab = $_GET['lab'];
-    $estado_atual = (int)$_GET['estado'];
 
+    // Pega o laboratório e o novo estado de modo aula atualizado pelo toggle
+    $lab = $_GET['lab'];
+    $estado_novo = (int)$_GET['estado'];
+
+    // Confere se o usuário está logado
     if((!isset($_SESSION['email'])) || (!isset($_SESSION['senha']))){
         echo json_encode(["ok" => false, "mensagem" => "Sessão expirada"]);
-        
-    } else {
+    } else { // Se estiver logado
 
-        $sql = "UPDATE laboratorios SET modo_aula = '$estado_atual' WHERE id = '$lab'";
+        // Atualiza o valor do modo aula no banco de dados
+        $sql = "UPDATE laboratorios SET modo_aula = '$estado_novo' WHERE id = '$lab'";
 
+        // Retorna o resultado da atualização com o novo valor do modo aula
         if (mysqli_query($conn, $sql)) {
             echo json_encode([
                 "ok" => true,
                 "lab" => $lab,
-                "modo_aula" => $estado_atual
+                "modo_aula" => $estado_novo
             ]);
         } else {
             echo json_encode([
