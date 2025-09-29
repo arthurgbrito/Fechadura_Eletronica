@@ -140,10 +140,11 @@ section#historico h1 {
 }
 
 #mostra_Historico {
-  width: 95%;
-  height: 85%;
-  border: 1px solid black;
-
+    width: 95%;
+    height: 85%;
+    border: 1px solid black;
+    overflow-y: auto;
+    overflow: hidden;
 }
 
 section#interacao_Porta {
@@ -164,7 +165,6 @@ section#interacao_Porta {
     gap: 10px;
     overflow-x: auto; 
     padding: 10px;
-    scroll-snap-type: x mandatory;
     margin: 0 10px;
     position: relative;
 }
