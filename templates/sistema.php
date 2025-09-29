@@ -41,7 +41,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
             <ul>
                 <li><a href="#" class="top">Sistema</a></li>
                 <li><a href="#">Programar Fechadura</a></li>
-                <li><a href="#" class="bottom">Sair</a></li>
+                <li><a href="../APIs/logout.php" class="bottom">Sair</a></li>
             </ul>
         </nav>
     </header>
