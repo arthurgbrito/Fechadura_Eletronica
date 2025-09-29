@@ -233,6 +233,11 @@ section#historico h1, .titulo_lab {
     order: 1;
 }
 
+.caixa-laboratorio:hover .toggle,
+.caixa-laboratorio:focus-within .toggle {
+    pointer-events: all;
+}
+
 .caixa-laboratorio:hover .modo_aula,
 .caixa-laboratorio:focus-within .modo_aula {
     flex-direction: column;
@@ -250,6 +255,7 @@ section#historico h1, .titulo_lab {
 .caixa-laboratorio:hover .modo_aula label,
 .caixa-laboratorio:focus-within .modo_aula label {
     transform: translateX(0);
+    pointer-events: all;
 }
 
 .caixa-laboratorio:hover .caixa_led,
@@ -315,6 +321,7 @@ section#historico h1, .titulo_lab {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     order: 1;
+    pointer-events: none;
 }
 
 .toggle-modo-aula {
@@ -358,6 +365,7 @@ section#historico h1, .titulo_lab {
 
 .toggle {
     display: none;
+    pointer-events: none
 }
 
 .switch {

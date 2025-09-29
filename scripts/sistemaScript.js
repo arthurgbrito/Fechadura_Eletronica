@@ -6,7 +6,7 @@ addEventListener ("DOMContentLoaded", () => {
     labs.forEach(num => {procuraModoAula(num)})
 })
 
-setInterval(() => {labs.forEach(num => procuraModoAula(num))}, 10000);
+setInterval(() => {labs.forEach(num => procuraModoAula(num))}, 2000);
 
 async function procuraModoAula (lab) {
 
@@ -45,13 +45,10 @@ async function atualizaModoAula(lab){
     try {
         
         const resp = await fetch(`../APIs/atualizaDB_site.php?lab=${indice}&estado=${estadoNovo}`, {method: "GET", cache: "no-store"});
-        console.log(resp);
-        if (!resp.ok) throw new Error("HTTP " + resp.status);
-
+        
         const data = await resp.json();
 
         if(data.ok){
-            console.log("Modo aula atualizado com sucesso");
             if (data.modo_aula) atualiza_Led(lab, "on");
             else atualiza_Led(lab, "off");
         }
@@ -109,7 +106,6 @@ function atualiza_Led (lab, estado){
             switch_atual.style.backgroundColor = "#9a9a9a";
             slider.style.transform = "translateX(0px)";
         }
-
     }
 }
 

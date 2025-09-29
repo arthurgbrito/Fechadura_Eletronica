@@ -59,14 +59,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle1">Modo Aula</label>
+                        <label>Modo Aula</label>
                         <div class="toggle-modo-aula">
 
                             <div class="caixa_led" id="led_R_1">
                                 <span class="led"></span>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle1" class="toggle" onchange="atualizaModoAula('1')">
+                            <input type="checkbox" name="on/off" id="toggle1" class="toggle" onchange="atualizaModoAula(1)">
                             <label for="toggle1" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -88,14 +88,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle2">Modo Aula</label>
+                        <label>Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_2">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle2" class="toggle" onchange="atualizaModoAula('2')">
+                            <input type="checkbox" name="on/off" id="toggle2" class="toggle" onchange="atualizaModoAula(2)">
                             <label for="toggle2" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -117,14 +117,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle3">Modo Aula</label>
+                        <label>Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_3">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle3" class="toggle" onchange="atualizaModoAula('3')">
+                            <input type="checkbox" name="on/off" id="toggle3" class="toggle" onchange="atualizaModoAula(3)">
                             <label for="toggle3" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -146,14 +146,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle6">Modo Aula</label>
+                        <label>Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_6">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle6" class="toggle" onchange="atualizaModoAula('6')">
+                            <input type="checkbox" name="on/off" id="toggle6" class="toggle" onchange="atualizaModoAula(6)">
                             <label for="toggle6" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -175,14 +175,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle9">Modo Aula</label>
+                        <label>Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_9">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle9" class="toggle" onchange="atualizaModoAula('9')">
+                            <input type="checkbox" name="on/off" id="toggle9" class="toggle" onchange="atualizaModoAula(9)">
                             <label for="toggle9" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -204,14 +204,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle10">Modo Aula</label>
+                        <label >Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_10">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle10" class="toggle" onchange="atualizaModoAula('10')">
+                            <input type="checkbox" name="on/off" id="toggle10" class="toggle" onchange="atualizaModoAula(10)">
                             <label for="toggle10" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -233,14 +233,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle11">Modo Aula</label>
+                        <label >Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_11">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle11" class="toggle" onchange="atualizaModoAula('11')">
+                            <input type="checkbox" name="on/off" id="toggle11" class="toggle" onchange="atualizaModoAula(11)">
                             <label for="toggle11" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -262,14 +262,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle12">Modo Aula</label>
+                        <label >Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_12">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle12" class="toggle" onchange="atualizaModoAula('12')">
+                            <input type="checkbox" name="on/off" id="toggle12" class="toggle" onchange="atualizaModoAula(12)">
                             <label for="toggle12" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -291,14 +291,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle13">Modo Aula</label>
+                        <label >Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_13">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle13" class="toggle" onchange="atualizaModoAula('13')">
+                            <input type="checkbox" name="on/off" id="toggle13" class="toggle" onchange="atualizaModoAula(13)">
                             <label for="toggle13" class="switch">
                                 <span class="slider"></span>
                             </label>
@@ -320,14 +320,14 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                         <h2>FECHADO</h2>
                     </div>
                     <div class="modo_aula">
-                        <label for="toggle14">Modo Aula</label>
+                        <label >Modo Aula</label>
 
                         <div class="toggle-modo-aula">
                             <div class="caixa_led" id="led_R_14">
                                 <div class="led"></div>
                                 <span class="baixo-led"></span>
                             </div>
-                            <input type="checkbox" name="on/off" id="toggle14" class="toggle" onchange="atualizaModoAula('14')">
+                            <input type="checkbox" name="on/off" id="toggle14" class="toggle" onchange="atualizaModoAula(14)">
                             <label for="toggle14" class="switch">
                                 <span class="slider"></span>
                             </label>
