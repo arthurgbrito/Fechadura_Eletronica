@@ -127,23 +127,40 @@ section#historico{
     flex: 1;
     padding-bottom: 15px;
     margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
 }
 
-#historico > table {
-    width: 95%;
+.tableContainer {
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    flex: 1;
+}
+
+.tableContainer table {
+    width: 90%;
     height: calc(100% - 60px);
     border-collapse: collapse;
-    margin: 20px auto;
     background-color: var(--Light-green);
-    overflow-y: auto;
-    overflow: hidden;
+    margin: 0px auto;
 }
 
-#historico > table th, #historico > table td {
+.tableContainer thead {
+    border: 1px solid black;    
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.tableContainer > table th, .tableContainer > table td {
     border: 1px solid black;
     padding: 4px;
     text-align: center;
+    color: black;
 }
 
 .cabecalhoTabela th {
@@ -151,11 +168,13 @@ section#historico{
     color: var(--Light-green);
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 50px;
+    padding: 5px;
+    color: var(--Light-green);
 }
 
 section#historico h1 {
     border-radius: 12px 12px 0 0 ;
+    width: 100%;
     padding: 15px;
     margin-bottom: 15px;
     background-color: var(--Darker-green);
