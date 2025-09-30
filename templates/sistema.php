@@ -345,7 +345,52 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
         </section>
         <section id="historico">
             <h1>Histórico</h1>
-            <iframe src="historico.html" id="mostra_Historico" frameborder="0"></iframe>
+
+            <table>
+                <thead class="cabecalhoTabela">
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Dia</th>
+                        <th>Hora</th>
+                        <th>Lab</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Arthur</td><td>27/09/2025</td><td>08:00</td><td class="lab">1</td></tr>
+                    <tr><td>Maria</td><td>27/09/2025</td><td>08:30</td><td class="lab">2</td></tr>
+                    <tr><td>João</td><td>27/09/2025</td><td>09:00</td><td class="lab">3</td></tr>
+                    <tr><td>Lucas</td><td>27/09/2025</td><td>09:30</td><td class="lab">6</td></tr>
+                    <tr><td>Ana</td><td>27/09/2025</td><td>10:00</td><td class="lab">9</td></tr>
+                    <tr><td>Pedro</td><td>27/09/2025</td><td>10:30</td><td class="lab">10</td></tr>
+                    <tr><td>Clara</td><td>27/09/2025</td><td>11:00</td><td class="lab">11</td></tr>
+                    <tr><td>Felipe</td><td>27/09/2025</td><td>11:30</td><td class="lab">12</td></tr>
+                    <tr><td>Beatriz</td><td>27/09/2025</td><td>12:00</td><td class="lab">13</td></tr>
+                    <tr><td>Renan</td><td>27/09/2025</td><td>12:30</td><td class="lab">14</td></tr>
+                    <tr><td>Marcos</td><td>28/09/2025</td><td>08:00</td><td class="lab">1</td></tr>
+                    <tr><td>Juliana</td><td>28/09/2025</td><td>08:30</td><td class="lab">2</td></tr>
+                    <tr><td>Thiago</td><td>28/09/2025</td><td>09:00</td><td class="lab">3</td></tr>
+                    <tr><td>Rafaela</td><td>28/09/2025</td><td>09:30</td><td class="lab">6</td></tr>
+                    <tr><td>André</td><td>28/09/2025</td><td>10:00</td><td class="lab">9</td></tr>
+                    <tr><td>Camila</td><td>28/09/2025</td><td>10:30</td><td class="lab">10</td></tr>
+                    <tr><td>Leonardo</td><td>28/09/2025</td><td>11:00</td><td class="lab">11</td></tr>
+                    <tr><td>Gabriela</td><td>28/09/2025</td><td>11:30</td><td class="lab">12</td></tr>
+                    <tr><td>Diego</td><td>28/09/2025</td><td>12:00</td><td class="lab">13</td></tr>
+                    <tr><td>Larissa</td><td>28/09/2025</td><td>12:30</td><td class="lab">14</td></tr>
+                    <tr><td>Henrique</td><td>29/09/2025</td><td>08:00</td><td class="lab">1</td></tr>
+                    <tr><td>Paula</td><td>29/09/2025</td><td>08:30</td><td class="lab">2</td></tr>
+                    <tr><td>Bruno</td><td>29/09/2025</td><td>09:00</td><td class="lab">3</td></tr>
+                    <tr><td>Fernanda</td><td>29/09/2025</td><td>09:30</td><td class="lab">6</td></tr>
+                    <tr><td>Rodrigo</td><td>29/09/2025</td><td>10:00</td><td class="lab">9</td></tr>
+                    <tr><td>Luana</td><td>29/09/2025</td><td>10:30</td><td class="lab">10</td></tr>
+                    <tr><td>Carlos</td><td>29/09/2025</td><td>11:00</td><td class="lab">11</td></tr>
+                    <tr><td>Patrícia</td><td>29/09/2025</td><td>11:30</td><td class="lab">12</td></tr>
+                    <tr><td>Vitor</td><td>29/09/2025</td><td>12:00</td><td class="lab">13</td></tr>
+                    <tr><td>Natália</td><td>29/09/2025</td><td>12:30</td><td class="lab">14</td></tr>
+                </tbody>
+            </table>
+
+
+            <!--<iframe src="historico.html" id="mostra_Historico" frameborder="0"></iframe>-->
         </section>
     </main>
 

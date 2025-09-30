@@ -113,11 +113,9 @@ main {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
+    gap: 20px;
 }
 
-main > * {
-    margin: 0 15px;
-}
 
 section#historico{
     height: 95%;
@@ -127,8 +125,33 @@ section#historico{
     border-radius: 15px;
     box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.35 );
     flex: 1;
-    text-align: center;
     padding-bottom: 15px;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+#historico > table {
+    width: 95%;
+    height: calc(100% - 60px);
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: var(--Light-green);
+    overflow-y: auto;
+    overflow: hidden;
+}
+
+#historico > table th, #historico > table td {
+    border: 1px solid black;
+    padding: 4px;
+    text-align: center;
+}
+
+.cabecalhoTabela th {
+    background-color: var(--Main-green);
+    color: var(--Light-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 50px;
 }
 
 section#historico h1 {
@@ -137,6 +160,7 @@ section#historico h1 {
     margin-bottom: 15px;
     background-color: var(--Darker-green);
     color: var(--Light-green);
+    text-align: center;
 }
 
 #mostra_Historico {
@@ -155,7 +179,7 @@ section#interacao_Porta {
     border-radius: 15px;
     box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.35 );
     padding-bottom: 15px;
-
+    margin-left: 20px;
 }
 
 .rolagem_lab{
@@ -381,7 +405,7 @@ section#historico h1, .titulo_lab {
 
 .slider {
     position: absolute;
-    left: 3px;
+    left: 4px;
     top: 3px;
     height: 24px;
     width: 24px;
