@@ -139,20 +139,21 @@ section#historico{
     height: calc(100% - 60px);
     overflow-y: auto;
     flex: 1;
+    position: relative;
 }
 
 .tableContainer table {
     width: 90%;
-    height: calc(100% - 60px);
+    height: auto;
+    border-spacing: 0;
     border-collapse: collapse;
     background-color: var(--Light-green);
     margin: 0px auto;
 }
 
-.tableContainer thead {
-    border: 1px solid black;    
+.tableContainer thead {   
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 2;
 }
 
@@ -163,13 +164,16 @@ section#historico{
     color: black;
 }
 
-.cabecalhoTabela th {
+.cabecalhoTabela > tr > th {
     background-color: var(--Main-green);
     color: var(--Light-green);
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 5px;
-    color: var(--Light-green);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-clip: padding-box;
 }
 
 section#historico h1 {
