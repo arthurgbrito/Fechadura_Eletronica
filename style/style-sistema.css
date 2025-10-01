@@ -135,15 +135,17 @@ section#historico{
 }
 
 .tableContainer {
-    width: 100%;
+    width: 90%;
     height: calc(100% - 60px);
     overflow-y: auto;
     flex: 1;
     position: relative;
+    border-radius: 0 0 15px 15px;
+    border: 1px solid black;
 }
 
 .tableContainer table {
-    width: 90%;
+    width: 100%;
     height: auto;
     border-spacing: 0;
     border-collapse: collapse;
@@ -151,11 +153,13 @@ section#historico{
     margin: 0px auto;
 }
 
-.tableContainer thead {   
+.tableContainer thead {
     position: sticky;
-    top: 0px;
-    z-index: 2;
+    top: -1px;
+    z-index: 5; 
+    border: 1px solid black;
 }
+
 
 .tableContainer > table th, .tableContainer > table td {
     border: 1px solid black;
@@ -169,11 +173,8 @@ section#historico{
     color: var(--Light-green);
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 5;
     background-clip: padding-box;
+    padding: 8px;
 }
 
 section#historico h1 {

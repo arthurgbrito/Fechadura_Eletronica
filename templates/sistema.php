@@ -39,7 +39,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="#" class="top">Sistema</a></li>
+                <li><a href="sistema.php" class="top">Sistema</a></li>
                 <li><a href="#">Programar Fechadura</a></li>
                 <li><a href="../APIs/logout.php" class="bottom">Sair</a></li>
             </ul>
@@ -350,10 +350,10 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                 <table>
                     <thead class="cabecalhoTabela">
                         <tr>
-                            <th>Usuário</th>
-                            <th>Dia</th>
-                            <th>Hora</th>
-                            <th>Lab</th>
+                            <th scope="col">Usuário</th>
+                            <th scope="col">Dia</th>
+                            <th scope="col">Hora</th>
+                            <th scope="col">Lab</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -99,6 +99,10 @@
         max-width: 90%;
     }
 
+    section#historico {
+        height: 600px;
+    }
+
     .estado_porta h2 {
         font-size: 3vw;
     }
@@ -245,6 +249,10 @@
         margin: 10px 0;
         flex: none;
         max-width: 90%;
+    }
+
+    section#historico {
+        height: 600px;
     }
     
     .caixa-laboratorio {
