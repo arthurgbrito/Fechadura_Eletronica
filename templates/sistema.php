@@ -40,7 +40,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
         <nav class="navbar">
             <ul>
                 <li><a href="sistema.php" class="top">Sistema</a></li>
-                <li><a href="#">Programar Fechadura</a></li>
+                <li><a href="../templates/programarhorario.html">Programar Fechadura</a></li>
                 <li><a href="../APIs/logout.php" class="bottom">Sair</a></li>
             </ul>
         </nav>

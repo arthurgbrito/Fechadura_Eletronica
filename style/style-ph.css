@@ -1,0 +1,106 @@
+
+:root {
+    --yellow: #f6f326;
+    --Main-green: #388E3C;
+    --Dark-green: #2E7D32;
+    --Light-green: #E8F5E9;
+    --Middle-green: #66BB6A;
+    --Darker-green: #1B5E20;
+    --red: #ED1C24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    overflow-x: hidden; 
+    width: 100%;   
+    background-color: var(--Light-green);
+}
+
+header {
+    height: 150px;
+    width: 100vw;
+    background: linear-gradient(var(--Darker-green), var(--Dark-green));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.mainTitle {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mainTitle h1 {
+    margin-left: 50px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.mainTitle img {
+    height: 80px;
+    margin-right: 15px;
+}
+
+.mainTitle h1 {
+    text-align: center;
+    color: var(--yellow);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.464);
+    font-size: 30px;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
+}
+
+.menu {
+    display: none;
+}
+
+.menu div {
+    width: 30px;
+    height: 2.5px;
+    background-color: var(--Light-green);
+    margin: 8px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar ul li {
+    display: inline;
+    letter-spacing: 2px;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--Light-green);
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: var(--yellow);
+    color: var(--Dark-green);
+    transition: .5s;
+}
