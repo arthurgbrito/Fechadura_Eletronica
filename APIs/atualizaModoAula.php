@@ -15,9 +15,8 @@
             $row = mysqli_fetch_assoc($result);
             $estado_atual = (int)$row['modo_aula'];
 
-            $responde = [
+            $response = [
                 "ok" => true,
-                "username" => $user['Username'],
                 "modoAula" => $estado_atual
             ];
         }
