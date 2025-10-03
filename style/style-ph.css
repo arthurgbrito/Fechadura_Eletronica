@@ -172,3 +172,74 @@ section {
     font-weight: bold;
     font-size: 15px;
 }
+
+.alarmes {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.alarme {
+    width: 60%;
+    background-color: var(--Light-green);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 0 20px;
+}
+
+.alarme h1 {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.alarme > div {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.horaAlarme {
+    font-size: 45px;
+    
+}
+
+#toggleAlarme {
+    display: none;
+}
+
+.switch {
+    display: flex;
+    background-color: rgb(164, 164, 164);
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+}
+
+#toggleAlarme:checked ~ .switch {
+    background-color: var(--Main-green);
+}
+
+#toggleAlarme:checked ~ .switch .slider {
+    transform: translateX(31px);
+}
