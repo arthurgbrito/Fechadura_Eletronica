@@ -3,6 +3,7 @@
     include_once("../database/conexao.php");
 
     $lab = $_GET['lab'] ?? '';
+    $modoAula_esp = $_GET['modoAula'] ?? '';
     $response = ["ok" => false];
 
     if (!empty($lab)){
@@ -13,12 +14,20 @@
         if (mysqli_num_rows($result) > 0){
 
             $row = mysqli_fetch_assoc($result);
-            $estado_atual = (int)$row['modo_aula'];
+            $modoAula_banco = (int)$row['modo_aula'];
 
-            $response = [
-                "ok" => true,
-                "modoAula" => $estado_atual
-            ];
+            if ($modoAula_esp === $modoAula_banco) {
+                $response = [
+                    "ok" => true,
+                    "diferente" => false
+                ];
+            } else if ($modoAula_esp != $modoAula_banco) {
+                $response = [
+                    "ok" => true,
+                    "diferente" => true,
+                    "modoAula" => $modoAula_banco
+                ];
+            }
         }
     }
 
