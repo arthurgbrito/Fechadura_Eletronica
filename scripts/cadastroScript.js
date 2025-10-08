@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             } catch (err) {
-                console.error("Erro ao monitorar cadastro:", err);
+                console.error("Erro ao se conectar com a API:", err);
                 setTimeout(() => monitoraCadastro(idSolicitacao), 1000); 
             }
         }
