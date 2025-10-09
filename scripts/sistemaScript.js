@@ -128,3 +128,29 @@ menu.addEventListener('click', () => {
         flag = 0;
     }
 })
+
+let ultimoID = 0;
+
+setInterval(() => {atualizaHistorico()}, 1000);
+
+async function atualizaHistorico(){
+    const respose = await fetch(`../APIs/getHistorico.php?ultimoID=${ultimoID}`, {method:  "GET", cache: "no-store"});
+
+    const novasLinhas = await respose.json();
+
+    if (novasLinhas.length > 0){
+        const corpoTabela = document.getElementById('corpoTabela');
+        novasLinhas.forEach(linha => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${linha.usuario}</td>
+                <td>${linha.data}</td>
+                <td>${linha.hora}</td>
+                <td class="lab">${linha.lab}</td>
+            `;
+
+            corpoTabela.prepend(tr);
+            ultimoID = novasLinhas[novasLinhas.length - 1].id
+        })
+    };
+}
