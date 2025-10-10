@@ -26,10 +26,7 @@ async function carregaHistorico(){
                 <td>${linha.hora}</td>
                 <td class="lab">${parseInt(linha.lab_id)}</td>
             `;
-
-
-            corpoTabela.prepend(tr);
-            
+            corpoTabela.appendChild(tr);
         })
         ultimoID = data[data.length - 1].id;
         console.log("Ultimo ID: ", ultimoID);
