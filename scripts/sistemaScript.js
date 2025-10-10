@@ -3,8 +3,41 @@ let flag = 0;
 
 addEventListener ("DOMContentLoaded", () => {
 
-    labs.forEach(num => {procuraModoAula(num)})
+    carregaHistorico();
+    labs.forEach(num => {procuraModoAula(num)});
 })
+
+
+async function carregaHistorico(){
+
+    try {
+        const response = await fetch('../APIs/carregaHistorico.php', {method: "GET", cache: "no-store"});
+
+        const data = await response.json();
+
+        const corpoTabela = document.getElementById('corpoTabela');
+        corpoTabela.innerHTML = '';
+
+        data.forEach(linha => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${linha.usuario}</td>
+                <td>${linha.data.split("-").reverse().join("/")}</td>
+                <td>${linha.hora}</td>
+                <td class="lab">${parseInt(linha.lab_id)}</td>
+            `;
+
+
+            corpoTabela.prepend(tr);
+            
+        })
+        ultimoID = data[data.length - 1].id;
+        console.log("Ultimo ID: ", ultimoID);
+
+    } catch {
+        alert("ERRO ao acessar a tabela historico.");
+    }
+}
 
 setInterval(() => {labs.forEach(num => procuraModoAula(num))}, 2000);
 
@@ -15,7 +48,6 @@ async function procuraModoAula (lab) {
     try {
 
         const response = await fetch(`../APIs/getModoAula.php?lab=${indice}`, {method:  "GET", cache: "no-store"});
-        if (!response.ok) throw new Error ("HTTP" + response.status);
 
         const data = await response.json();
         if (data.ok){
@@ -131,26 +163,29 @@ menu.addEventListener('click', () => {
 
 let ultimoID = 0;
 
-setInterval(() => {atualizaHistorico()}, 1000);
+setInterval(() => {atualizaHistorico()}, 500);
 
 async function atualizaHistorico(){
     const respose = await fetch(`../APIs/getHistorico.php?ultimoID=${ultimoID}`, {method:  "GET", cache: "no-store"});
 
     const novasLinhas = await respose.json();
 
-    if (novasLinhas.length > 0){
-        const corpoTabela = document.getElementById('corpoTabela');
-        novasLinhas.forEach(linha => {
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td>${linha.usuario}</td>
-                <td>${linha.data}</td>
-                <td>${linha.hora}</td>
-                <td class="lab">${linha.lab}</td>
-            `;
 
-            corpoTabela.prepend(tr);
-            ultimoID = novasLinhas[novasLinhas.length - 1].id
-        })
-    };
+    if (novasLinhas.ok){
+        const corpoTabela = document.getElementById('corpoTabela');
+        
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${novasLinhas.usuario}</td>
+            <td>${novasLinhas.data}</td>
+            <td>${novasLinhas.hora}</td>
+            <td class="lab">${novasLinhas.lab}</td>
+        `;
+
+        corpoTabela.append(tr);
+        ultimoID = novasLinhas.id;
+    
+    } //else {
+        //console.log("Nenhuma atualização");
+    //}
 }

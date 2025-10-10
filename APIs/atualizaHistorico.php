@@ -1,6 +1,7 @@
 <?php 
 
 include_once("../database/conexao.php");
+date_default_timezone_set('America/Sao_Paulo');
 
 $cracha = $_POST['cracha'] ?? '';
 $lab = $_POST['lab'] ?? '';
@@ -19,9 +20,12 @@ $result = mysqli_query($conn, $sql);
 
 if ($result){
 
+    $data = date('Y-m-d');
+    $hora = date('H:i:s');
     $row = mysqli_fetch_assoc($result);
     $username = $row['Username'];
-    $sql = "INSERT INTO historico(usuario, data_hora, lab_id) VALUES('$username', NOW(), '$lab')";
+    
+    $sql = "INSERT INTO historico(usuario, data, hora, lab_id) VALUES('$username', '$data', '$hora', '$lab')";
     mysqli_query($conn, $sql);
 
     $response = ["ok" => true];
