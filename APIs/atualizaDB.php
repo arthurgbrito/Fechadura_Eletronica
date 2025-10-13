@@ -27,7 +27,7 @@
         $sql = "DELETE FROM usuarios WHERE id = '$usuario_id'";
         mysqli_query($conn, $sql);
 
-        echo json_encode(["status" => "erro"]);
+        echo json_encode(["ok" => false]);
         
     } else {
         
@@ -39,6 +39,6 @@
         $sql = "UPDATE usuarios u JOIN solicitacoes s ON u.id = s.usuario_id SET u.cracha = '$cracha' WHERE s.id = '$id_solicitacao'";
         mysqli_query($conn, $sql);
 
-        echo json_encode(["status" => "ok"]);
+        echo json_encode(["ok" => true]);
     }
 ?>
