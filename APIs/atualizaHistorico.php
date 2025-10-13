@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $sql);
 if ($result){
 
     $data = date('Y-m-d');
-    $hora = date('H:i:s');
+    $hora = date('H:i');
     $row = mysqli_fetch_assoc($result);
     $username = $row['Username'];
     

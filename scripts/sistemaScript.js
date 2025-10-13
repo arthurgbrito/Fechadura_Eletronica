@@ -23,7 +23,7 @@ async function carregaHistorico(){
             tr.innerHTML = `
                 <td>${linha.usuario}</td>
                 <td>${linha.data.split("-").reverse().join("/")}</td>
-                <td>${linha.hora}</td>
+                <td>${linha.hora.slice(0,5)}</td>
                 <td class="lab">${parseInt(linha.lab_id)}</td>
             `;
             corpoTabela.appendChild(tr);
@@ -174,8 +174,8 @@ async function atualizaHistorico(){
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${novasLinhas.usuario}</td>
-            <td>${novasLinhas.data}</td>
-            <td>${novasLinhas.hora}</td>
+            <td>${novasLinhas.data.split("-").reverse().join("/")}</td>
+            <td>${novasLinhas.hora.slice(0,5)}</td>
             <td class="lab">${novasLinhas.lab}</td>
         `;
 
