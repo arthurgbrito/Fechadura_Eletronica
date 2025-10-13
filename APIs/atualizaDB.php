@@ -20,11 +20,11 @@
         $row = mysqli_fetch_assoc($result);
         $usuario_id = $row['usuario_id'];
 
-        $sql = "DELETE FROM solicitacoes WHERE id = '$id_solicitacao'";
+        $sql = "UPDATE solicitacoes SET status_cadastro = 'erro', cracha = 0 WHERE id = '$id_solicitacao'";
         mysqli_query($conn, $sql);
 
         // Apaga as informações do usuário que tentou se cadastrar
-        $sql = "DELETE FROM usuarios WHERE id = '$usuario_id'";
+        $sql = "UPDATE usuarios SET Password = NULL WHERE id = '$usuario_id'";
         mysqli_query($conn, $sql);
 
         echo json_encode(["ok" => false]);

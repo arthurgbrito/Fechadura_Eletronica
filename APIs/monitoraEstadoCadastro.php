@@ -3,7 +3,7 @@
     session_start();
     include_once('../database/conexao.php');
 
-    $solicitacao_id = $_GET['solicitacao_id'];
+    $solicitacao_id = $_GET['id'];
 
     $sql = "SELECT status_cadastro FROM solicitacoes WHERE id = '$solicitacao_id' LIMIT 1";
     $result = mysqli_query($conn, $sql);
