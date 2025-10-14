@@ -18,8 +18,8 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema</title>
 
-    <link rel="stylesheet" href="../style/style-sistema.css">
-    <link rel="stylesheet" href="../style/medias-sistema.css">
+    <link rel="stylesheet" href="../style/style-sistemaUser.css">
+    <link rel="stylesheet" href="../style/medias-sistemaUser.css">
 
     <link rel="shortcut icon" href="../style/imagens/logo-tro.ico" type="image/x-icon">
 
@@ -343,31 +343,9 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                 </div>
             </div>
         </section>
-        <section id="historico">
-            <h1>Histórico</h1>
-
-            <div class="tableContainer">
-                <table>
-                    <thead class="cabecalhoTabela">
-                        <tr>
-                            <th scope="col">Usuário</th>
-                            <th scope="col">Dia</th>
-                            <th scope="col">Hora</th>
-                            <th scope="col">Lab</th>
-                        </tr>
-                    </thead>
-                    <tbody id="corpoTabela">
-                        
-                    </tbody>
-                </table>
-            </div>
-
-
-            <!--<iframe src="historico.html" id="mostra_Historico" frameborder="0"></iframe>-->
-        </section>
     </main>
 
-    <script src="../scripts/sistemaScript.js"></script>
+    <script src="../scripts/sistemaScriptUser.js"></script>
 
 </body>
 

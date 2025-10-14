@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+
+@media screen and (max-width: 768px){
+
+    header {
+        position: relative;
+        height: 100px;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .mainTitle {
+        position: absolute;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+
+    .mainTitle h1 {
+        font-size: 18px;
+        width: 80%;
+        margin: 0;
+    }
+
+    .mainTitle img {
+        height: 70px;
+        width: 70px;
+        margin: 0;
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 280px;
+        height: auto;
+        background-color: var(--Darker-green);
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.432);
+        border-radius: 20px;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(20px, -20px);
+        transition: .2s ease-in-out;
+
+    }   
+
+    .navbar ul li {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        display: block;
+        font-size: 15px;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .navbar ul li .top {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .navbar ul li .bottom {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        height: auto;
+        width: 100%;
+    }
+
+    section#interacao_Porta, section#historico {
+        width: 90%;
+        margin: 10px 0;
+        flex: none;
+        max-width: 90%;
+    }
+
+    section#historico {
+        height: 600px;
+    }
+
+    .estado_porta h2 {
+        font-size: 3vw;
+    }
+
+    .estado_porta img {
+        height: 6vw;
+    }
+
+    .caixa-laboratorio {
+        width: 200px;
+        gap: 5px;
+    }
+
+    .caixa-laboratorio > h1 {
+        font-size: 3.7vw;
+    }
+
+    .modo_aula label {
+        font-size: 3vw;
+    }
+
+    .caixa_led {
+        width: 20px;
+        height: 20px;
+    }
+
+    .led {
+        width: 70%;
+        height: 90%;
+    }
+
+    .baixo-led {
+        width: 80%;
+        height: 10%;
+
+    }
+
+    .switch {
+        width: 60px;
+        height: 30px;
+    }
+
+    .slider {
+        position: absolute;
+        left: 5px;
+        height: 23px;
+        width: 23px;
+        background-color: white;
+        border-radius: 50%;
+        transition: all .5s ease-in-out;
+    }
+
+    .toggle:checked ~ .switch .slider {
+        transform: translateX(27px);
+    }
+
+    .abre_porta {
+        width: 60%;
+        height: 30px;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width:950px){
+    
+    header {
+        position: relative;
+        height: 100px;
+        align-items: start;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        height: auto;
+        width: 100%;
+    }
+
+    .mainTitle {
+        position: absolute;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 280px;
+        height: auto;
+        background-color: var(--Darker-green);
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.432);
+        border-radius: 20px;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(20px, -20px);
+        transition: .2s ease-in-out;
+
+    }   
+
+    .navbar ul li {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        display: block;
+        font-size: 15px;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .navbar ul li .top {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .navbar ul li .bottom {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    section#interacao_Porta, section#historico {
+        width: 90%;
+        margin: 10px 0;
+        flex: none;
+        max-width: 90%;
+    }
+
+    section#historico {
+        height: 600px;
+    }
+    
+    .caixa-laboratorio {
+        width: 31vw;
+    }
+
+    .caixa_led {
+        width: 25px;
+        height: 25px;
+    }
+
+    .led {
+        width: 70%;
+        height: 90%;
+    }
+
+    .baixo-led {
+        width: 80%;
+        height: 10%;
+
+    }
+}
+
+@media screen and (min-width: 951px) and (max-width: 1140px) {
+
+    .navbar ul li a {
+        font-size: 1.5vw;
+    }
+
+    .rolagem_lab {
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        overflow-x: auto;   
+        overflow-y: hidden; 
+        padding: 15px;
+        scroll-snap-type: x mandatory; 
+        margin: 0 10px;}
+
+    .caixa-laboratorio h1 {
+        font-size: 2vw;
+    }
+
+    .modo_aula label {
+        font-size: 2vw;
+    }
+
+    .abre_porta {
+        font-size: 15px;
+    }
+}

@@ -7,21 +7,31 @@
         
         include_once('../database/conexao.php');
 
-        $email = $_POST['email'];
-        $senha = $_POST['password'];
+        $email = trim($_POST['email']);
+        $senha = trim($_POST['password']);
 
-        $confere = "SELECT * FROM usuarios WHERE Email = '$email' and Password = '$senha'";
-        
-        $resultado = $conn->query($confere);
 
-        if (mysqli_num_rows($resultado) == 0){
+        $confere = "SELECT Cargo FROM usuarios WHERE Email = '$email' and Password = '$senha'";
+        $result = mysqli_query($conn, $confere);
+
+        if (mysqli_num_rows($result) > 0){
+
+            $row = mysqli_fetch_assoc($result);
+            $cargo = $row['Cargo'];
+
+            if ($cargo == "admin"){
+                $_SESSION['email'] = $email;
+                $_SESSION['senha'] = $senha;
+                header('Location: sistemaAdmin.php');
+            } else {
+                $_SESSION['email'] = $email;
+                $_SESSION['senha'] = $senha;
+                header('Location: sistemaUser.php'); 
+            }
+        } else {
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
             header('Location: cadastro.php');
-        } else {
-            $_SESSION['email'] = $email;
-            $_SESSION['senha'] = $senha;
-            header('Location: sistema.php');
         }
     }
 ?>
