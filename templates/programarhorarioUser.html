@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programe o horário da Fechadura</title>
+    <link rel="stylesheet" href="../style/style-phUser.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="mainTitle">
+            <img src="../style/imagens/logo-tro.png" alt="Logo Curso">
+            <h1 class="header_title">Controle de Acesso</h1>
+        </div>
+        <div class="menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="sistemaUser.php" class="top">Sistema</a></li>
+                <li><a href="../templates/programarhorarioUser.html">Programar Fechadura</a></li>
+                <li><a href="../APIs/logout.php" class="bottom">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="title">Programe o horário da Fechadura</h1>
+
+    <main>
+        <section class="alarmes">
+
+            <div class="alarme">
+                
+                <h1>Adicionar título</h1>    
+                
+                <div class="horario">
+                    <p class="horaAlarme">00:00</p>
+                    <input type="checkbox" name="toggleAlarme" id="toggleAlarme">
+                    <label for="toggleAlarme" class="switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="data">
+                    <p class="dias">qui, 02 de Out</p>
+                    <p class="lab">LAB 01</p>
+                </div>
+            </div>
+
+        </section>
+        <section class="novoAlarme">
+
+            <button id="botaoNovoAlarme">
+                <img src="../style/imagens/add.png" alt="Adicionar Alarme">
+                <span>Adicionar Alarme</span>
+            </button>
+            
+        </section>
+    </main>
+    
+</body>
+</html>

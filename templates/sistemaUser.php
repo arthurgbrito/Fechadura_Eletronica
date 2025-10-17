@@ -39,8 +39,8 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="sistema.php" class="top">Sistema</a></li>
-                <li><a href="../templates/programarhorario.html">Programar Fechadura</a></li>
+                <li><a href="sistemaUser.php" class="top">Sistema</a></li>
+                <li><a href="../templates/programarhorarioUser.html">Programar Fechadura</a></li>
                 <li><a href="../APIs/logout.php" class="bottom">Sair</a></li>
             </ul>
         </nav>
