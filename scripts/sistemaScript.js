@@ -5,7 +5,39 @@ addEventListener ("DOMContentLoaded", () => {
 
     carregaHistorico();
     labs.forEach(num => {procuraModoAula(num)});
+    labs.forEach(num => {carregaEstadoPorta(num)});
 })
+
+setInterval(() => {labs.forEach(num => carregaEstadoPorta(num))}, 500);
+
+async function carregaEstadoPorta(lab) {
+
+    let caixaPorta = document.getElementById('estado_porta' + lab);
+    let iconePorta = caixaPorta.querySelector('#porta');
+    let textoPorta = caixaPorta.querySelector('#texto-porta');
+    indice = labs.indexOf(lab) + 1
+
+    try {
+        const response = await fetch(`../APIs/monitoraEstadoPorta.php?lab=${indice}`, {method: "GET", cache: "no-store"});
+        
+        const data = await response.json();
+        //console.log("Estado da porta do lab " + lab + ": ", data.estado_porta);
+        
+        if (data.ok){
+            if (data.estado_porta){
+                iconePorta.src = "../style/imagens/porta-aberta.png";
+                textoPorta.textContent = "ABERTO";
+                textoPorta.style.color = "#4CAF50";
+            } else {
+                iconePorta.src = "../style/imagens/porta-fechada.png";
+                textoPorta.textContent = "FECHADO";
+                textoPorta.style.color = "#F44336";
+            }
+        } else alert("erro na resposta da API:");
+    } catch (err){
+        alert("Erro ao carregar estado da porta:", err);
+    }
+}
 
 
 async function carregaHistorico(){
