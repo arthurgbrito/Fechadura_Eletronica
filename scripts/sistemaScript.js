@@ -51,12 +51,16 @@ async function carregaHistorico(){
         corpoTabela.innerHTML = '';
 
         data.forEach(linha => {
+
+            let lab = parseInt(linha.lab_id);
+            let labReal = labs[lab - 1];
+
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${linha.usuario}</td>
                 <td>${linha.data.split("-").reverse().join("/")}</td>
                 <td>${linha.hora.slice(0,5)}</td>
-                <td class="lab">${parseInt(linha.lab_id)}</td>
+                <td class="lab">${labReal}</td>
             `;
             corpoTabela.appendChild(tr);
         })
