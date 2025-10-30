@@ -20,7 +20,6 @@
             echo json_encode([
                 "ok" => true,
                 "lab" => $lab,
-                "resultado" => $result,
                 "modo_aula" => $estado_novo
             ]);
         } else {
