@@ -34,8 +34,8 @@ async function carregaEstadoPorta(lab) {
                 textoPorta.style.color = "#F44336";
             }
         } else alert("erro na resposta da API:");
-    } catch (err){
-        alert("Erro ao carregar estado da porta:", err);
+    } catch{
+        alert("Erro ao carregar estado da porta:");
     }
 }
 
@@ -43,14 +43,19 @@ async function carregaEstadoPorta(lab) {
 async function carregaHistorico(){
 
     try {
+
         const response = await fetch('../APIs/carregaHistorico.php', {method: "GET", cache: "no-store"});
 
         const data = await response.json();
 
         const corpoTabela = document.getElementById('corpoTabela');
         corpoTabela.innerHTML = '';
+        let hoje = new Date();
+        let data_atual = hoje.toISOString().split('T')[0];
 
         data.forEach(linha => {
+
+            if (data_atual != linha.data) return;
 
             let lab = parseInt(linha.lab_id);
             let labReal = labs[lab - 1];
@@ -90,9 +95,7 @@ async function procuraModoAula (lab) {
             } else {
                 atualiza_Led(lab, "off")
             }
-        } else {
-            alert("Nao foi possivel fazer isso" + data.mensagem);
-        }
+        } 
     } catch (err){
         console.error("Erro: ", err);
     }
@@ -114,8 +117,26 @@ async function atualizaModoAula(lab){
         const data = await resp.json();
 
         if(data.ok){
-            if (data.modo_aula) atualiza_Led(lab, "on");
-            else atualiza_Led(lab, "off");
+            if (data.modo_aula) {
+                atualiza_Led(lab, "on");
+                let cracha = data.cracha;
+
+                const atualiza = await fetch("../APIs/atualizaHistorico.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: `cracha=${encodeURIComponent(cracha)}&lab=${encodeURIComponent(indice)}`,
+                    cache: "no-store"
+                });
+                const data_atualiza = await atualiza.json();
+
+                if (data_atualiza.ok){
+                    console.log("Histórico atualizado com sucesso.");
+                } else {
+                    console.log("Erro ao atualizar histórico: ", indice);
+                }
+            } else atualiza_Led(lab, "off");
         }
     } catch (err) {
         console.error("Erro ao atualizar modo aula:", err);
@@ -202,7 +223,8 @@ async function atualizaHistorico(){
     const respose = await fetch(`../APIs/getHistorico.php?ultimoID=${ultimoID}`, {method:  "GET", cache: "no-store"});
 
     const novasLinhas = await respose.json();
-
+    let lab = parseInt(novasLinhas.lab);
+    let labReal = labs[lab - 1];
 
     if (novasLinhas.ok){
         const corpoTabela = document.getElementById('corpoTabela');
@@ -212,7 +234,7 @@ async function atualizaHistorico(){
             <td>${novasLinhas.usuario}</td>
             <td>${novasLinhas.data.split("-").reverse().join("/")}</td>
             <td>${novasLinhas.hora.slice(0,5)}</td>
-            <td class="lab">${novasLinhas.lab}</td>
+            <td class="lab">${labReal}</td>
         `;
 
         corpoTabela.append(tr);
