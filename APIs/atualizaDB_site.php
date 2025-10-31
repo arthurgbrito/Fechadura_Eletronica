@@ -8,22 +8,41 @@
 
     // Confere se o usuário está logado
     if((!isset($_SESSION['email'])) || (!isset($_SESSION['senha']))){
-        echo json_encode(["ok" => false, "mensagem" => "Sessão expirada"]);
+        $response = (["ok" => false, "mensagem" => "Sessão expirada"]);
     } else { // Se estiver logado
 
         // Atualiza o valor do modo aula no banco de dados
         $sql = "UPDATE laboratorios SET modo_aula = '$estado_novo' WHERE id = '$lab'";
         $result = mysqli_query($conn, $sql);
 
-        // Retorna o resultado da atualização com o novo valor do modo aula
+        // Retorna o sucesso ou falha da operação
         if ($result) {
-            echo json_encode([
-                "ok" => true,
-                "lab" => $lab,
-                "modo_aula" => $estado_novo
-            ]);
+
+            //Pega as informações do usuário
+            $email = $_SESSION['email'];
+            $senha = $_SESSION['senha'];
+
+            // Procura o crachá desse usuário
+            $sql = "SELECT cracha FROM usuarios WHERE Email = '$email' AND Password = '$senha' LIMIT 1";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0){ // Se achar o crachá desse usuário 
+                $user = mysqli_fetch_assoc($result);
+                $cracha = $user['cracha']; // Pega ele
+
+                $response = ([
+                    "ok" => true,
+                    "cracha" => $cracha,
+                    "modo_aula" => $estado_novo
+                ]);
+            } else {
+                $response = ([
+                    "ok" => false,
+                    "mensagem" => "Erro ao pegar o crachá"
+                ]);
+            }
         } else {
-            echo json_encode([
+            $response = ([
                 "ok" => false,
                 "mensagem" => "Erro ao atualizar"
             ]);
@@ -31,55 +50,10 @@
     }
     
     header("Content-Type: application/json");
+    echo json_encode($response);
     
-
-    // Verifica se existe algum usuário logado
-    /*if((!isset($_SESSION['email'])) || (!isset($_SESSION['senha']))){
-        echo json_encode(["ok" => false, "mensagem" => "Sessão expirada"]);
-        
-    } else { // Se existir
-
-        //Pega as informações do usuário
-        $email = $_SESSION['email'];
-        $senha = $_SESSION['senha'];
-
-        // Procura o ID desse usuário
-        $sql = "SELECT id FROM usuarios WHERE Email = '$email' AND Password = '$senha' LIMIT 1";
-        $result = mysqli_query($conn, $sql);
-
-        // Se achar o ID
-        if (mysqli_num_rows($result) > 0){
-            $user = mysqli_fetch_assoc($result);
-            $user_id = $user['id']; // Pega esse ID
-
-            // Procura na tabela de permissões se ele tem permissão para entrar no lab
-            $sql = "SELECT * FROM permissoes WHERE usuario_id = '$user_id' AND lab_id = '$lab' LIMIT 1";
-            $result = mysqli_query($conn, $sql);
-
-            $sql = "SELECT modo_aula FROM laboratorios WHERE id = '$lab' LIMIT 1";
-            $res = mysqli_query($conn, $sql);
-
-            $row = mysqli_fetch_assoc($res);
-            $estado_atual = (int)$row['modo_aula'];
-
-            $estado_novo = !$estado_atual;
-            $sql = "UPDATE laboratorios SET modo_aula = '$estado_novo' WHERE id = '$lab'";
-            mysqli_query($conn, $sql);
-
-            $response = [
-                "ok" => true,
-                "mensagem" => "Modo aula atualizado",
-                "lab" => $lab,
-                "modo_aula" => $estado_atual
-            ];
-
-            // Se existir essa permissão
-            if (mysqli_num_rows($result) > 0){
-
-
-                
-            }
-        }
-    }*/
+    // Procura na tabela de permissões se ele tem permissão para entrar no lab
+    /*$sql = "SELECT * FROM permissoes WHERE usuario_id = '$user_id' AND lab_id = '$lab' LIMIT 1";
+    $result = mysqli_query($conn, $sql);*/
 
 ?>
