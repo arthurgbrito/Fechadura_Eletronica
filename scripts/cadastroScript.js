@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function monitoraCadastro(idSolicitacao) {
     if (flagCadastro == 1) {
         try {
-            const resp = await fetch(`../APIs/monitoraEstadoPorta.php?id=${idSolicitacao}`, {method: "GET", cache: "no-store"});
+            const resp = await fetch(`../APIs/monitoraEstadoCadastro.php?id=${idSolicitacao}`, {method: "GET", cache: "no-store"});
             if (!resp.ok) throw new Error("HTTP " + resp.status);
 
             const data = await resp.json();
