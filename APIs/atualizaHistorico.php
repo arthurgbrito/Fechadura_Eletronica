@@ -5,10 +5,8 @@ date_default_timezone_set('America/Sao_Paulo');
 
 $cracha = $_POST['cracha'] ?? '';
 $lab = $_POST['lab'] ?? '';
-$acao = $_POST['acao'] ?? '';
-$response = ["ok" => false];
 
-if (!$cracha || !$lab || !$acao) {
+if (!$cracha || !$lab) {
     $response = ["ok" => false, "erro" => "Parametros faltando"];
     header('Content-Type: application/json');
     echo json_encode($response);
