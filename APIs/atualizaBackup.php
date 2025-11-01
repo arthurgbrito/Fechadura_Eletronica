@@ -2,7 +2,7 @@
 
 include_once("../database/conexao.php");
 
-$sql = "SELECT Username, cracha FROM usuarios WHERE cracha IS NOT NULL";
+$sql = "SELECT Username, cracha FROM usuarios WHERE cracha IS NOT NULL AND cracha <> 0";
 $result = mysqli_query($conn, $sql);
 
 $usuarios = [];
