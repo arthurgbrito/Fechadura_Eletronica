@@ -361,9 +361,6 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     </tbody>
                 </table>
             </div>
-
-
-            <!--<iframe src="historico.html" id="mostra_Historico" frameborder="0"></iframe>-->
         </section>
     </main>
 
