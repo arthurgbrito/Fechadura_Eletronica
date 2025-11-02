@@ -4,7 +4,39 @@ let flag = 0;
 addEventListener ("DOMContentLoaded", () => {
 
     labs.forEach(num => {procuraModoAula(num)});
+    labs.forEach(num => {carregaEstadoPorta(num)});
 })
+
+setInterval(() => {labs.forEach(num => carregaEstadoPorta(num))}, 500);
+
+async function carregaEstadoPorta(lab) {
+
+    let caixaPorta = document.getElementById('estado_porta' + lab);
+    let iconePorta = caixaPorta.querySelector('#porta');
+    let textoPorta = caixaPorta.querySelector('#texto-porta');
+    indice = labs.indexOf(lab) + 1
+
+    try {
+        const response = await fetch(`../APIs/monitoraEstadoPorta.php?lab=${indice}`, {method: "GET", cache: "no-store"});
+        
+        const data = await response.json();
+        //console.log("Estado da porta do lab " + lab + ": ", data.estado_porta);
+        
+        if (data.ok){
+            if (data.estado_porta){
+                iconePorta.src = "../style/imagens/porta-aberta.png";
+                textoPorta.textContent = "ABERTO";
+                textoPorta.style.color = "#4CAF50";
+            } else {
+                iconePorta.src = "../style/imagens/porta-fechada.png";
+                textoPorta.textContent = "FECHADO";
+                textoPorta.style.color = "#F44336";
+            }
+        } else console.error("erro na resposta da API:");
+    } catch{
+        console.error("Erro ao carregar estado da porta:");
+    }
+}
 
 setInterval(() => {labs.forEach(num => procuraModoAula(num))}, 2000);
 
@@ -48,8 +80,26 @@ async function atualizaModoAula(lab){
         const data = await resp.json();
 
         if(data.ok){
-            if (data.modo_aula) atualiza_Led(lab, "on");
-            else atualiza_Led(lab, "off");
+            if (data.modo_aula) {
+                atualiza_Led(lab, "on");
+                let cracha = data.cracha;
+
+                const atualiza = await fetch("../APIs/atualizaHistorico.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: `cracha=${encodeURIComponent(cracha)}&lab=${encodeURIComponent(indice)}`,
+                    cache: "no-store"
+                });
+                const data_atualiza = await atualiza.json();
+
+                if (data_atualiza.ok){
+                    console.log("Histórico atualizado com sucesso.");
+                } else {
+                    console.log("Erro ao atualizar histórico: ", indice);
+                }
+            } else atualiza_Led(lab, "off");
         }
     } catch (err) {
         console.error("Erro ao atualizar modo aula:", err);

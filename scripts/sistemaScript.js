@@ -33,9 +33,9 @@ async function carregaEstadoPorta(lab) {
                 textoPorta.textContent = "FECHADO";
                 textoPorta.style.color = "#F44336";
             }
-        } else alert("erro na resposta da API:");
+        } else console.error("erro na resposta da API:");
     } catch{
-        alert("Erro ao carregar estado da porta:");
+        console.error("Erro ao carregar estado da porta:");
     }
 }
 

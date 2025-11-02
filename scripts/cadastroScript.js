@@ -60,8 +60,8 @@ async function monitoraCadastro(idSolicitacao) {
             if (data.ok) {
                 console.log(data.status_cadastro)
                 if (data.status_cadastro == 'concluido') {
-                    alert("Cadastro aprovado! Você será redirecionado para a página de login.");
-                    window.location.href = "login.php";
+                    mostrarModalSucesso();
+                    setTimeout(() => window.location.href = "login.php", 3000);
                     flagCadastro = 0;
                 } else if (data.status_cadastro == 'pendente') {
                     setTimeout(() => monitoraCadastro(idSolicitacao), 500); 
@@ -76,4 +76,10 @@ async function monitoraCadastro(idSolicitacao) {
             setTimeout(() => monitoraCadastro(idSolicitacao), 1000); 
         }
     }
+}
+
+
+function mostrarModalSucesso() {
+  const modal = document.getElementById("modalSucesso");
+  modal.style.display = "flex";
 }
