@@ -20,7 +20,7 @@
         $row = mysqli_fetch_assoc($result);
         $usuario_id = $row['usuario_id'];
 
-        $sql = "UPDATE solicitacoes SET status_cadastro = 'erro', cracha = 0 WHERE id = '$id_solicitacao'";
+        $sql = "UPDATE solicitacoes SET status_cadastro = 'erro', cracha = NULL WHERE id = '$id_solicitacao'";
         mysqli_query($conn, $sql);
 
         // Apaga as informações do usuário que tentou se cadastrar
