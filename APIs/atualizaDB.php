@@ -2,10 +2,9 @@
 
     include_once("../database/conexao.php");
 
-    // Recepção dos dados 
+    // Recebe os dados via POST
     $id_solicitacao = $_POST['id_solicitacao'];
     $cracha = $_POST['cracha'];
-
 
     // Consulta o banco de dados para verificar se já está cadastrado o novo crachá
     $sql = "SELECT id FROM usuarios WHERE cracha = '$cracha' LIMIT 1";
