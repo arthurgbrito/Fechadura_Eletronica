@@ -9,7 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   $email = $_POST['email'];
   $cargo = $_POST['cargo'];
 
-  $resultado = mysqli_query($conn, "INSERT INTO usuarios(Username, Password, Email, Cargo) VALUES ('$nome', '$senha', '$email', '$cargo')");
+  $sql = "INSERT INTO usuarios(Username, Password, Email, Cargo) VALUES ('$nome', '$senha', '$email', '$cargo')";
+  $resultado = mysqli_query($conn, $sql);
   
   if ($resultado){
     $usuario_id = mysqli_insert_id($conn);  
