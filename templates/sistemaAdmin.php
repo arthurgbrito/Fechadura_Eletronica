@@ -41,7 +41,8 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
             <ul>
                 <li><a href="sistemaAdmin.php" class="top">Sistema</a></li>
                 <li><a href="../templates/programarhorarioAdmin.html">Programar Fechadura</a></li>
-                <li><a href="../APIs/logout.php" class="bottom">Sair</a></li>
+                <li><a href="../APIs/logout.php">Sair</a></li>
+                <li><a href="codigos-acesso.html" class="bottom">Códigos de Acesso</a></li>
             </ul>
         </nav>
     </header>
