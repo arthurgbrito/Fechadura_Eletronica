@@ -1,0 +1,182 @@
+
+:root {
+    --yellow: #f6f326;
+    --Main-green: #388E3C;
+    --Dark-green: #2E7D32;
+    --Light-green: #E8F5E9;
+    --Middle-green: #66BB6A;
+    --Darker-green: #1B5E20;
+    --red: #ea2f36;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    overflow-x: hidden; 
+    width: 100%;   
+    background-color: var(--Light-green);
+}
+
+header {
+    height: 150px;
+    width: 100vw;
+    background: linear-gradient(var(--Darker-green), var(--Dark-green));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px 7px 15px black;
+}
+
+.mainTitle {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mainTitle h1 {
+    margin-left: 50px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.mainTitle img {
+    height: 80px;
+    margin-right: 15px;
+}
+
+.mainTitle h1 {
+    text-align: center;
+    color: var(--yellow);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.464);
+    font-size: 30px;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
+}
+
+.menu {
+    display: none;
+}
+
+.menu div {
+    width: 30px;
+    height: 2.5px;
+    background-color: var(--Light-green);
+    margin: 8px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar ul li {
+    display: inline;
+    letter-spacing: 2px;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--Light-green);
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: var(--yellow);
+    color: var(--Dark-green);
+    transition: .5s;
+}
+
+main {
+    background-color: var(--Light-green);
+    width: 100%;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#boxCodigos {
+    height: 90%;
+    width: 90%;
+    background-color: var(--Darker-green);
+    border-radius: 15px;
+}
+
+#boxCodigos h2 {
+    text-align: center;
+    color: var(--yellow);
+    margin: 20px 0;
+}
+
+.rolagemCodigos {
+    width: 85%;
+    height: 80%;
+    margin: auto;
+    padding: 5px;
+}
+
+.caixaCodigo {
+    width: 280px;
+    height: 170px;
+    background-color: var(--Light-green);
+    margin: 10px 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    border-radius: 20px;
+}
+
+.caixaCodigo > .interacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+}
+
+.caixaCodigo > .codigo {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.interacao > .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 25px;
+}
+
+#btnConfirmar {
+    background-color: var(--Middle-green);
+    border: 2px solid var(--Darker-green);
+}
+
+#btnExcluir {
+    background-color: var(--red);
+    border: 2px solid rgb(197, 0, 0);
+}

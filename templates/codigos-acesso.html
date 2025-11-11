@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código de Acessos</title>
+    <link rel="stylesheet" href="../style/style-codigos-acesso.css">
+    <link rel="stylesheet" href="../style/medias-codigos-acesso.css">
+    
+    <link rel="shortcut icon" href="../style/imagens/logo-tro.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="mainTitle">
+            <img src="../style/imagens/logo-tro.png" alt="Logo Curso">
+            <h1 class="header_title">Controle de Acesso</h1>
+        </div>
+        <div class="menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="sistemaAdmin.php" class="top">Sistema</a></li>
+                <li><a href="../templates/programarhorarioAdmin.html">Programar Fechadura</a></li>
+                <li><a href="../APIs/logout.php">Sair</a></li>
+                <li><a href="codigo-acesso.html" class="bottom">Códigos de Acesso</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="boxCodigos">
+            <h2>Códigos de Acesso</h2>
+            <div class="rolagemCodigos">
+                <div class="caixaCodigo">
+                    <p class="usuario">Usuário: Regina Ungaretti</p>
+                    <p class="codigo">A52G0P8</p>
+                    <div class="interacao">
+                        <button id="btnConfirmar" class="btn">✓</button>
+                        <button id="btnExcluir" class="btn">X</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <script>
+        flag = 0;
+        const menu = document.querySelector('.menu');
+        const navbar = document.querySelector('.navbar ul');
+
+        menu.addEventListener('click', () => {
+            if (flag == 0){
+                navbar.style.opacity = "1";
+                navbar.style.pointerEvents = "auto";
+                menu.style.transform = "rotate(90deg)";
+                menu.style.transition = "transform 0.3s ease";
+                flag = 1;
+            } else {
+                navbar.style.opacity = "0";
+                navbar.style.pointerEvents = "none";
+                menu.style.transform = "rotate(0deg)";
+                menu.style.transition = "transform 0.3s ease";
+                flag = 0;
+            }
+        })
+    </script>
+</body>
+</html>
