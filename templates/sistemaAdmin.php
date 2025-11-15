@@ -365,7 +365,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
         </section>
     </main>
 
-    <script src="../scripts/sistemaScript.js"></script>
+    <script src="../scripts/sistemaScriptAdmin.js"></script>
 
 </body>
 
