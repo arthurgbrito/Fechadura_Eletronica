@@ -19,7 +19,7 @@
             $row = mysqli_fetch_assoc($result);
             $cargo = $row['Cargo'];
 
-            if ($cargo == "admin"){
+            if ($cargo == "estagiario"){
                 $_SESSION['email'] = $email;
                 $_SESSION['senha'] = $senha;
                 header('Location: sistemaAdmin.php');

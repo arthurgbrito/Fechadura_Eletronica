@@ -1,5 +1,10 @@
 let labs = [1,2,3,6,9,10,11,12,13,14];
 let flag = 0;
+const menu = document.querySelector('.menu');
+const navbar = document.querySelector('.navbar ul');
+
+setInterval(() => {labs.forEach(num => procuraModoAula(num))}, 2000);
+setInterval(() => {labs.forEach(num => carregaEstadoPorta(num))}, 500);
 
 addEventListener ("DOMContentLoaded", () => {
 
@@ -7,7 +12,21 @@ addEventListener ("DOMContentLoaded", () => {
     labs.forEach(num => {carregaEstadoPorta(num)});
 })
 
-setInterval(() => {labs.forEach(num => carregaEstadoPorta(num))}, 500);
+menu.addEventListener('click', () => {
+    if (flag == 0){
+        navbar.style.opacity = "1";
+        navbar.style.pointerEvents = "auto";
+        menu.style.transform = "rotate(90deg)";
+        menu.style.transition = "transform 0.3s ease";
+        flag = 1;
+    } else {
+        navbar.style.opacity = "0";
+        navbar.style.pointerEvents = "none";
+        menu.style.transform = "rotate(0deg)";
+        menu.style.transition = "transform 0.3s ease";
+        flag = 0;
+    }
+})
 
 async function carregaEstadoPorta(lab) {
 
@@ -37,8 +56,7 @@ async function carregaEstadoPorta(lab) {
         console.error("Erro ao carregar estado da porta:");
     }
 }
-
-setInterval(() => {labs.forEach(num => procuraModoAula(num))}, 2000);
+    
 
 async function procuraModoAula (lab) {
 
@@ -159,21 +177,6 @@ function atualiza_Led (lab, estado){
 }
 
 
-const menu = document.querySelector('.menu');
-const navbar = document.querySelector('.navbar ul');
 
-menu.addEventListener('click', () => {
-    if (flag == 0){
-        navbar.style.opacity = "1";
-        navbar.style.pointerEvents = "auto";
-        menu.style.transform = "rotate(90deg)";
-        menu.style.transition = "transform 0.3s ease";
-        flag = 1;
-    } else {
-        navbar.style.opacity = "0";
-        navbar.style.pointerEvents = "none";
-        menu.style.transform = "rotate(0deg)";
-        menu.style.transition = "transform 0.3s ease";
-        flag = 0;
-    }
-})
+
+

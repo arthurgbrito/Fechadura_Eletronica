@@ -89,7 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
           <option value="auxiliar">Auxiliar de Ensino</option>
           <option value="professor">Professor</option>
           <option value="estagiario">Estagiário</option>
-          <option value="vanderlei">Vanderlei</option>
         </select>
       </div>
 
