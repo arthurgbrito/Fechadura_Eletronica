@@ -210,6 +210,14 @@ input, select {
   animation: bounce 0.6s ease;
 }
 
+.icone-erro {
+    color: rgb(187, 11, 11);
+    font-size: 60px;
+    animation: bounce 0.6s ease;
+}
+
+
+
 @keyframes popIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }

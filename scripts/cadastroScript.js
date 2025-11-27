@@ -72,7 +72,8 @@ async function monitoraCadastro(idSolicitacao) {
 
                 if (data.status_cadastro == 'concluido') {
                     mostrarModalSucesso();
-                    setTimeout(() => window.location.href = "login.php", 3000);
+                    setTimeout(() => window.location.href = "login.php", 4000);
+
                     flagCadastro = 0;
 
                 } else if (data.status_cadastro == 'pendente') {
@@ -114,7 +115,8 @@ async function monitoraCadastro(idSolicitacao) {
                     }
 
                 } else if (data.status_cadastro == 'erro') {
-                    alert("Houve um erro no cadastro. Por favor, tente novamente.");
+                    mostrarModalErro();
+                    setTimeout(() => window.location.href = "cadastro.php", 4000);
                     window.location.href = "cadastro.php";
                     
                     flagCadastro = 0;
@@ -131,5 +133,10 @@ async function monitoraCadastro(idSolicitacao) {
 
 function mostrarModalSucesso() {
   const modal = document.getElementById("modalSucesso");
+  modal.style.display = "flex";
+}
+
+function mostrarModalErro() {
+  const modal = document.getElementById("modalErro");
   modal.style.display = "flex";
 }

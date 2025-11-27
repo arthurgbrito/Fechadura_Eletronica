@@ -114,6 +114,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
       <p>Seu crachá foi registrado com sucesso. Você será redirecionado para o login.</p>
     </div>
   </div>
+
+  <div id="modalErro" class="modal">
+    <div class="modal-content">
+      <div class="icone-erro">&#10006;</div>
+      <h2>Falha no cadastro!</h2>
+      <p>Houve algum erro no cadastro do seu crachá. Tente novamente!</p>
+    </div>
+  </div>
   
 </body>
 </html>
